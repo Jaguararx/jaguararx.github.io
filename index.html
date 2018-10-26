@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title v-if="!title">COE Test Automatoin Sample App</title>
+    <template v-else>
+        <title>{{ title }} - COE Test Automatoin Sample App</title>
+    </template>
+    <link rel="stylesheet" type="text/css" href="build/build.css">
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a v-link="'/'" class="navbar-brand">COE Test Automatoin Sample App</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li v-bind:class="{ active: $route.path === '/plans' }">
+                        <a v-link="'/plans'">Plans</a>
+                    </li>
+                    <li v-bind:class="{ active: $route.path === '/products' }">
+                        <a v-link="'/products'">Products</a>
+                    </li>
+                    <li v-bind:class="{ active: $route.path === '/calculations' }">
+                        <a v-link="'/calculations'">Calculations</a>
+                    </li>
+                    <li v-if="isAuthenticated" v-bind:class="{ active: $route.path === '/users' }">
+                        <a v-link="'/users'">Users</a>
+                    </li>
+                </ul>
+                <ul v-if="isAuthenticated" class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#" v-link="'settings'">Settings</a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li>
+                                <a href="#" v-on:click="signOut">Sign Out</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul v-else class="nav navbar-nav navbar-right">
+                    <li v-bind:class="{ active: $route.path === '/signin' }">
+                        <a v-link="'/signin'">Sign In</a>
+                    </li>
+                    <li v-bind:class="{ active: $route.path === '/signup' }">
+                        <a v-link="'/signup'">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container" v-show="!errors.notFound">
+        <router-view></router-view>
+    </div>
+    <div class="container" v-if="errors.notFound">
+        <not-found></not-found>
+    </div>
+
+    <script src="build/build.js"></script>
+</body>
+</html>

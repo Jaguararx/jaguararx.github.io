@@ -1,0 +1,92 @@
+﻿body > .container {
+    padding: 60px 15px 0;
+}
+
+.table tr {
+    > td.actions-column {
+        padding-top: 3px;
+        padding-bottom: 2px;
+    }
+
+    > td.user-actions-column {
+        width: 164px;
+        min-width: 164px;
+    }
+
+    > td.product-actions-column {
+        width: 580px;
+        min-width: 580px;
+    }
+}
+
+.has-error .help-block {
+    display: inline-block;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+label.label-option {
+    font-weight: normal;
+}
+
+.nav.nav-tabs {
+    margin-bottom: 15px;
+}
+
+textarea#notes {
+    height: 220px;
+    resize: none;
+}
+
+.nav.nav-tabs > li.active span.text-danger {
+    display: none;
+}
+
+.details-list {
+    dl {
+        margin-bottom: 10px;
+
+        dt {
+            display: inline-block;
+            min-width: 92px;
+            font-weight: normal;
+            color: #999;
+
+            :after {
+                content: ":";
+            }
+        }
+
+        dd {
+            display: inline;
+            font-weight: normal;
+            white-space: pre-wrap;
+        }
+    }
+}
+
+.feature-list {
+    padding: 0;
+
+    li {
+        list-style: none;
+
+        span.glyphicon-ok {
+            color: green;
+            margin-right: 6px;
+        }
+    }
+}
+
+.has-error {
+    .checkbox {
+        label {
+            color: #333;
+        }
+
+        .help-block {
+            padding-left: 20px;
+        }
+    }
+}

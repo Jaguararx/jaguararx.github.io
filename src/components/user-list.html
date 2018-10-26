@@ -1,0 +1,152 @@
+﻿<div class="col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0">
+    <div class="page-header">
+        <h1 class="text-center">{{ $root.title }}</h1>
+    </div>
+    <button v-on:click="new" class="btn btn-default">New</button>
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Office</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="item in items">
+                    <td>{{ item.firstName }}</td>
+                    <td>{{ item.lastName }}</td>
+                    <td>{{ item.email }}</td>
+                    <td>{{ item.office }}</td>
+                    <td class="actions-column user-actions-column">
+                        <div class="btn-group btn-group-sm" role="group">
+                            <a role="button" class="btn btn-default" v-link="'/users/' + item.id">View</a>
+                            <button class="btn btn-default" v-on:click="edit(item)">Edit</button>
+                            <button class="btn btn-default" v-on:click="remove(item)">Delete</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="modal fade" tabindex="-1" role="dialog" v-show-modal="isEditing" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" v-on:click="cancelEditing" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">{{ editItem.title }}</h4>
+            </div>
+            <div class="modal-body" style="height: 432px">
+                <validator name="validation">
+                    <form novalidate v-if="editItem.data">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active">
+                                <a href="#general" aria-controls="home" role="tab" data-toggle="tab">
+                                    General
+                                    <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"
+                                          v-if="$validation.firstName.invalid || $validation.lastName.invalid || $validation.email.invalid || $validation.office.invalid || $validation.gender.invalid"></span>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#additional" aria-controls="home" role="tab" data-toggle="tab">
+                                    Additional
+                                    <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"
+                                          v-if="$validation.birthday.invalid || $validation.notes.invalid"></span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="general">
+                                <div class="form-group" v-bind:class="{ 'has-error': $validation.firstName.invalid }">
+                                    <label for="first-name">First Name</label>
+                                    <span class="help-block" v-if="$validation.firstName.invalid">
+                                        {{ $validation.firstName.errors[0].message }}
+                                    </span>
+                                    <input type="text" id="first-name" v-model="editItem.data.firstName" class="form-control"
+                                           detect-change="off" v-validate:first-name="editItem.rules.firstName" />
+                                </div>
+                                <div class="form-group" v-bind:class="{ 'has-error': $validation.lastName.invalid }">
+                                    <label for="last-name">Last Name</label>
+                                    <span class="help-block" v-if="$validation.lastName.invalid">
+                                        {{ $validation.lastName.errors[0].message }}
+                                    </span>
+                                    <input type="text" id="last-name" v-model="editItem.data.lastName" class="form-control"
+                                           detect-change="off" v-validate:last-name="editItem.rules.lastName" />
+                                </div>
+                                <div class="form-group" v-bind:class="{ 'has-error': $validation.email.invalid }">
+                                    <label for="email">Email</label>
+                                    <span class="help-block" v-if="$validation.email.invalid">
+                                        {{ $validation.email.errors[0].message }}
+                                    </span>
+                                    <input type="text" id="email" v-model="editItem.data.email" v-bind:readonly="!editItem.isNew" class="form-control"
+                                           detect-change="off" v-validate:email="editItem.rules.email" />
+                                </div>
+                                <div class="form-group" v-bind:class="{ 'has-error': $validation.office.invalid }">
+                                    <label for="office">Office</label>
+                                    <span class="help-block" v-if="$validation.office.invalid">
+                                        {{ $validation.office.errors[0].message }}
+                                    </span>
+                                    <select id="office" v-model="editItem.data.office" class="form-control"
+                                            detect-change="off" v-validate:office="editItem.rules.office">
+                                        <option value="Berlin">Berlin</option>
+                                        <option value="London">London</option>
+                                        <option value="New York">New York</option>
+                                        <option value="Paris">Paris</option>
+                                        <option value="Rome">Rome</option>
+                                        <option value="Tokio">Tokio</option>
+                                        <option value="Washington">Washington</option>
+                                    </select>
+                                </div>
+                                <div class="form-group" v-bind:class="{ 'has-error': $validation.gender.invalid }">
+                                    <label>Gender</label>
+                                    <span class="help-block" v-if="$validation.gender.invalid">
+                                        {{ $validation.gender.errors[0].message }}
+                                    </span>
+                                    <input type="hidden" v-model="editItem.data.gender" v-validate:gender="editItem.rules.gender">
+                                    <br>
+                                    <label class="label-option">
+                                        <input type="radio" name="gender" value="Male" v-model="editItem.data.gender">
+                                        Male
+                                    </label>
+                                    <label class="label-option">
+                                        <input type="radio" name="gender" value="Female" v-model="editItem.data.gender">
+                                        Female
+                                    </label>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="additional">
+                                <div class="form-group" v-bind:class="{ 'has-error': $validation.birthday.invalid }">
+                                    <label for="birthday">Birthday</label>
+                                    <span class="help-block" v-if="$validation.birthday.invalid">
+                                        {{ $validation.birthday.errors[0].message }}
+                                    </span>
+                                    <div class="input-group date" v-date-picker="true">
+                                        <input type="text" id="birthday" v-model="editItem.data.birthday" class="form-control"
+                                               v-validate:birthday="editItem.rules.birthday" />
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                    </div>
+                                </div>
+                                <div class="form-group" v-bind:class="{ 'has-error': $validation.notes.invalid }">
+                                    <label for="notes">Notes</label>
+                                    <span class="help-block" v-if="$validation.notes.invalid">
+                                        {{ $validation.notes.errors[0].message }}
+                                    </span>
+                                    <textarea id="notes" v-model="editItem.data.notes" class="form-control"
+                                              detect-change="off" v-validate:notes="editItem.rules.notes"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </validator>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" v-if="editItem.isNew" v-on:click="create">Create</button>
+                <button type="button" class="btn btn-primary" v-if="!editItem.isNew" v-on:click="update">Save</button>
+                <button type="button" class="btn btn-default" v-on:click="cancelEditing">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
