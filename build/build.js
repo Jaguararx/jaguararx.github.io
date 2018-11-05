@@ -73,35 +73,35 @@
 
 	var _app2 = _interopRequireDefault(_app);
 
-	var _jquery = __webpack_require__(41);
+	var _jquery = __webpack_require__(42);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
-
-	__webpack_require__(42);
 
 	__webpack_require__(43);
 
 	__webpack_require__(44);
 
-	__webpack_require__(38);
-
 	__webpack_require__(45);
+
+	__webpack_require__(39);
+
+	__webpack_require__(46);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	window.$ = window.jQuery = _jquery2.default;
 
-	__webpack_require__(46);
 	__webpack_require__(47);
+	__webpack_require__(48);
 
-	_ = __webpack_require__(48);
+	_ = __webpack_require__(49);
 
 	_vue2.default.use(_vueResource2.default);
 	_vue2.default.use(_vueValidator2.default);
 	_vue2.default.use(_vueRouter2.default);
 
-	__webpack_require__(39);
 	__webpack_require__(40);
+	__webpack_require__(41);
 
 	var router = new _vueRouter2.default();
 
@@ -17313,7 +17313,7 @@
 	    },
 	    components: {
 	        notFound: {
-	            template: __webpack_require__(22)
+	            template: __webpack_require__(23)
 	        }
 	    }
 	};
@@ -17472,16 +17472,16 @@
 	                component: __webpack_require__(19)
 	            },
 	            '/signin': {
-	                component: __webpack_require__(29)
+	                component: __webpack_require__(30)
 	            },
 	            '/signup': {
-	                component: __webpack_require__(32)
+	                component: __webpack_require__(33)
 	            },
 	            '/plans': {
-	                component: __webpack_require__(23)
+	                component: __webpack_require__(24)
 	            },
 	            '/products': {
-	                component: __webpack_require__(25)
+	                component: __webpack_require__(26)
 	            },
 	            '/calculations': {
 	                component: __webpack_require__(17)
@@ -17496,7 +17496,7 @@
 	                component: requireWithAuthentication('./components/user-details.js')
 	            },
 	            '*': {
-	                component: __webpack_require__(21)
+	                component: __webpack_require__(22)
 	            }
 	        });
 	    },
@@ -17542,35 +17542,35 @@
 		"./components/forbidden.html": 15,
 		"./components/forbidden.js": 14,
 		"./components/home": 19,
-		"./components/home.html": 20,
+		"./components/home.html": 21,
 		"./components/home.js": 19,
-		"./components/not-found": 21,
-		"./components/not-found.html": 22,
-		"./components/not-found.js": 21,
-		"./components/plans": 23,
-		"./components/plans.html": 24,
-		"./components/plans.js": 23,
-		"./components/products": 25,
-		"./components/products.html": 26,
-		"./components/products.js": 25,
-		"./components/settings": 27,
-		"./components/settings.html": 28,
-		"./components/settings.js": 27,
-		"./components/sign-in": 29,
-		"./components/sign-in.html": 31,
-		"./components/sign-in.js": 29,
-		"./components/sign-up": 32,
-		"./components/sign-up.html": 33,
-		"./components/sign-up.js": 32,
-		"./components/user-details": 34,
-		"./components/user-details.html": 35,
-		"./components/user-details.js": 34,
-		"./components/user-list": 36,
-		"./components/user-list.html": 37,
-		"./components/user-list.js": 36,
-		"./css/main.scss": 38,
-		"./directives": 39,
-		"./directives.js": 39,
+		"./components/not-found": 22,
+		"./components/not-found.html": 23,
+		"./components/not-found.js": 22,
+		"./components/plans": 24,
+		"./components/plans.html": 25,
+		"./components/plans.js": 24,
+		"./components/products": 26,
+		"./components/products.html": 27,
+		"./components/products.js": 26,
+		"./components/settings": 28,
+		"./components/settings.html": 29,
+		"./components/settings.js": 28,
+		"./components/sign-in": 30,
+		"./components/sign-in.html": 32,
+		"./components/sign-in.js": 30,
+		"./components/sign-up": 33,
+		"./components/sign-up.html": 34,
+		"./components/sign-up.js": 33,
+		"./components/user-details": 35,
+		"./components/user-details.html": 36,
+		"./components/user-details.js": 35,
+		"./components/user-list": 37,
+		"./components/user-list.html": 38,
+		"./components/user-list.js": 37,
+		"./css/main.scss": 39,
+		"./directives": 40,
+		"./directives.js": 40,
 		"./index": 1,
 		"./index.js": 1,
 		"./routes": 13,
@@ -17579,10 +17579,10 @@
 		"./services/authentication-service.js": 8,
 		"./services/user-service": 9,
 		"./services/user-service.js": 9,
-		"./validator-rules": 30,
-		"./validator-rules.js": 30,
-		"./validators": 40,
-		"./validators.js": 40
+		"./validator-rules": 31,
+		"./validator-rules.js": 31,
+		"./validators": 41,
+		"./validators.js": 41
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -17639,23 +17639,67 @@
 
 	'use strict';
 
+	var _vuejsAutoComplete = __webpack_require__(20);
+
+	var _vuejsAutoComplete2 = _interopRequireDefault(_vuejsAutoComplete);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 	module.exports = {
-	    template: __webpack_require__(20),
-	    route: {
-	        activate: function activate() {
-	            this.$root.title = null;
-	        }
-	    }
+		template: __webpack_require__(21),
+		route: {
+			activate: function activate() {
+				this.$root.title = null;
+				setTimeout(function () {
+					jQuery(".waiting").show();
+					setTimeout(function () {
+						jQuery(".waiting").text("Ready");
+						setTimeout(function () {
+							jQuery(".waiting").hide();
+						}, 3000);
+					}, 2000);
+				}, 2000);
+				/**
+	    * Build `states` list of key/value pairs
+	    */
+				function loadAll() {
+					var allStates = 'Alabama, Alaska, Arizona, Arkansas, California, Colorado, Connecticut, Delaware,\
+						  Florida, Georgia, Hawaii, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana,\
+						  Maine, Maryland, Massachusetts, Michigan, Minnesota, Mississippi, Missouri, Montana,\
+						  Nebraska, Nevada, New Hampshire, New Jersey, New Mexico, New York, North Carolina,\
+						  North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, Rhode Island, South Carolina,\
+						  South Dakota, Tennessee, Texas, Utah, Vermont, Virginia, Washington, West Virginia,\
+						  Wisconsin, Wyoming';
+
+					return allStates.split(/, +/g).map(function (state) {
+						return {
+							id: state.toLowerCase(),
+							name: state
+						};
+					});
+				}
+				this.$root.statessource = loadAll();
+			}
+		},
+		components: {
+			Autocomplete: _vuejsAutoComplete2.default
+		}
 	};
 
 /***/ }),
 /* 20 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-	module.exports = "<div class=\"col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1\">\r\n    <div class=\"page-header\">\r\n        <h1 class=\"text-center docs-logotype\">COE Test Automation Sample App</h1>\r\n    </div>\r\n    <p>\r\n        <strong>Based on Vue.js and Bootstrap</strong>\r\n    </p>\r\n    <p>\r\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam pellentesque elit eget varius. Pellentesque vestibulum varius rhoncus. Sed vel hendrerit ligula, at iaculis urna. Phasellus massa nisi, commodo ac porttitor nec, bibendum vel lorem. Nunc consectetur massa a diam viverra, in ornare ligula dictum. Aenean libero eros, euismod et orci eget, sodales fermentum mi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam molestie feugiat bibendum. Nunc non finibus enim. Donec eget fringilla dolor. Integer nec hendrerit arcu.\r\n    </p>\r\n    <p class=\"text-center\" v-if=\"!$root.isAuthenticated\">\r\n        <a id=\"sign-in\" class=\"btn btn-lg btn-default\" v-link=\"'/signin'\">Sign In</a>\r\n        <a id=\"sign-up\" class=\"btn btn-lg btn-default\" v-link=\"'/signup'\">Sign Up</a>\r\n    </p>\r\n\t<p>Checkbox:\r\n\t  <input type=\"checkbox\" name=\"checkboxinput\" value=\"1\">\r\n    </p>\r\n\t<p>Radio:\r\n\t  <input name=\"_fsradio2\" type=\"radio\" value=\"1\">\r\n\t  <input name=\"_fsradio2\" type=\"radio\" value=\"2\">\r\n    </p>\r\n\t<p>Input text:\r\n\t  <input type=\"text\" name=\"textinput\" value=\"\">\r\n    </p>\r\n\t<p>\r\n\t  Select:\r\n\t  <select name=\"selectinput\" id=\"dropdown\">\r\n\t    <option value=\"1\">Option 1</option>\r\n\t    <option value=\"2\">Option 2</option>\r\n\t    <option value=\"3\">Option 3</option>\r\n\t  </select>\r\n    </p>\r\n\t<p>\r\n    </p>\r\n\t<p>\r\n    </p>\r\n\t<p>\r\n    </p>\r\n\t<p>\r\n    </p>\r\n\t<p>\r\n    </p>\r\n\t<p>\r\n    </p>\r\n\t<p>\r\n    </p>\r\n\t<p>\r\n    </p>\r\n\t<p>\r\n    </p>\r\n\t<p>\r\n    </p>\r\n\t<p>\r\n    </p>\r\n\t<p>\r\n    </p>\r\n\t<p>\r\n    </p>\r\n\t<p>\r\n    </p>\r\n\t<p>\r\n    </p>\r\n\t<p>\r\n    </p>\r\n\t<p>\r\n    </p>\r\n\t<p>\r\n    </p>\r\n\t<p>\r\n    </p>\r\n\t<p>\r\n    </p>\r\n\t<p>\r\n    </p>\r\n\t<p>\r\n    </p>\r\n\t<p>\r\n    </p>\r\n</div>\r\n";
+	!function(t,e){ true?module.exports=e():"function"==typeof define&&define.amd?define([],e):"object"==typeof exports?exports["vuejs-autocomplete"]=e():t["vuejs-autocomplete"]=e()}(this,function(){return function(t){function e(r){if(n[r])return n[r].exports;var i=n[r]={i:r,l:!1,exports:{}};return t[r].call(i.exports,i,i.exports,e),i.l=!0,i.exports}var n={};return e.m=t,e.c=n,e.i=function(t){return t},e.d=function(t,n,r){e.o(t,n)||Object.defineProperty(t,n,{configurable:!1,enumerable:!0,get:r})},e.n=function(t){var n=t&&t.__esModule?function(){return t.default}:function(){return t};return e.d(n,"a",n),n},e.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},e.p="/",e(e.s=89)}([function(t,e){var n=t.exports="undefined"!=typeof window&&window.Math==Math?window:"undefined"!=typeof self&&self.Math==Math?self:Function("return this")();"number"==typeof __g&&(__g=n)},function(t,e){var n={}.hasOwnProperty;t.exports=function(t,e){return n.call(t,e)}},function(t,e,n){var r=n(54),i=n(14);t.exports=function(t){return r(i(t))}},function(t,e,n){t.exports=!n(8)(function(){return 7!=Object.defineProperty({},"a",{get:function(){return 7}}).a})},function(t,e,n){var r=n(5),i=n(11);t.exports=n(3)?function(t,e,n){return r.f(t,e,i(1,n))}:function(t,e,n){return t[e]=n,t}},function(t,e,n){var r=n(7),i=n(29),o=n(23),s=Object.defineProperty;e.f=n(3)?Object.defineProperty:function(t,e,n){if(r(t),e=o(e,!0),r(n),i)try{return s(t,e,n)}catch(t){}if("get"in n||"set"in n)throw TypeError("Accessors not supported!");return"value"in n&&(t[e]=n.value),t}},function(t,e,n){var r=n(21)("wks"),i=n(12),o=n(0).Symbol,s="function"==typeof o;(t.exports=function(t){return r[t]||(r[t]=s&&o[t]||(s?o:i)("Symbol."+t))}).store=r},function(t,e,n){var r=n(9);t.exports=function(t){if(!r(t))throw TypeError(t+" is not an object!");return t}},function(t,e){t.exports=function(t){try{return!!t()}catch(t){return!0}}},function(t,e){t.exports=function(t){return"object"==typeof t?null!==t:"function"==typeof t}},function(t,e,n){var r=n(34),i=n(15);t.exports=Object.keys||function(t){return r(t,i)}},function(t,e){t.exports=function(t,e){return{enumerable:!(1&t),configurable:!(2&t),writable:!(4&t),value:e}}},function(t,e){var n=0,r=Math.random();t.exports=function(t){return"Symbol(".concat(void 0===t?"":t,")_",(++n+r).toString(36))}},function(t,e){var n=t.exports={version:"2.4.0"};"number"==typeof __e&&(__e=n)},function(t,e){t.exports=function(t){if(void 0==t)throw TypeError("Can't call method on  "+t);return t}},function(t,e){t.exports="constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf".split(",")},function(t,e){t.exports={}},function(t,e){t.exports=!0},function(t,e){e.f={}.propertyIsEnumerable},function(t,e,n){var r=n(5).f,i=n(1),o=n(6)("toStringTag");t.exports=function(t,e,n){t&&!i(t=n?t:t.prototype,o)&&r(t,o,{configurable:!0,value:e})}},function(t,e,n){var r=n(21)("keys"),i=n(12);t.exports=function(t){return r[t]||(r[t]=i(t))}},function(t,e,n){var r=n(0),i=r["__core-js_shared__"]||(r["__core-js_shared__"]={});t.exports=function(t){return i[t]||(i[t]={})}},function(t,e){var n=Math.ceil,r=Math.floor;t.exports=function(t){return isNaN(t=+t)?0:(t>0?r:n)(t)}},function(t,e,n){var r=n(9);t.exports=function(t,e){if(!r(t))return t;var n,i;if(e&&"function"==typeof(n=t.toString)&&!r(i=n.call(t)))return i;if("function"==typeof(n=t.valueOf)&&!r(i=n.call(t)))return i;if(!e&&"function"==typeof(n=t.toString)&&!r(i=n.call(t)))return i;throw TypeError("Can't convert object to primitive value")}},function(t,e,n){var r=n(0),i=n(13),o=n(17),s=n(25),u=n(5).f;t.exports=function(t){var e=i.Symbol||(i.Symbol=o?{}:r.Symbol||{});"_"==t.charAt(0)||t in e||u(e,t,{value:s.f(t)})}},function(t,e,n){e.f=n(6)},function(t,e){var n={}.toString;t.exports=function(t){return n.call(t).slice(8,-1)}},function(t,e,n){var r=n(9),i=n(0).document,o=r(i)&&r(i.createElement);t.exports=function(t){return o?i.createElement(t):{}}},function(t,e,n){var r=n(0),i=n(13),o=n(51),s=n(4),u=function(t,e,n){var c,a,l,f=t&u.F,p=t&u.G,d=t&u.S,y=t&u.P,h=t&u.B,v=t&u.W,g=p?i:i[e]||(i[e]={}),m=g.prototype,L=p?r:d?r[e]:(r[e]||{}).prototype;p&&(n=e);for(c in n)(a=!f&&L&&void 0!==L[c])&&c in g||(l=a?L[c]:n[c],g[c]=p&&"function"!=typeof L[c]?n[c]:h&&a?o(l,r):v&&L[c]==l?function(t){var e=function(e,n,r){if(this instanceof t){switch(arguments.length){case 0:return new t;case 1:return new t(e);case 2:return new t(e,n)}return new t(e,n,r)}return t.apply(this,arguments)};return e.prototype=t.prototype,e}(l):y&&"function"==typeof l?o(Function.call,l):l,y&&((g.virtual||(g.virtual={}))[c]=l,t&u.R&&m&&!m[c]&&s(m,c,l)))};u.F=1,u.G=2,u.S=4,u.P=8,u.B=16,u.W=32,u.U=64,u.R=128,t.exports=u},function(t,e,n){t.exports=!n(3)&&!n(8)(function(){return 7!=Object.defineProperty(n(27)("div"),"a",{get:function(){return 7}}).a})},function(t,e,n){"use strict";var r=n(17),i=n(28),o=n(35),s=n(4),u=n(1),c=n(16),a=n(56),l=n(19),f=n(63),p=n(6)("iterator"),d=!([].keys&&"next"in[].keys()),y=function(){return this};t.exports=function(t,e,n,h,v,g,m){a(n,e,h);var L,w,j,x=function(t){if(!d&&t in D)return D[t];switch(t){case"keys":case"values":return function(){return new n(this,t)}}return function(){return new n(this,t)}},M=e+" Iterator",b="values"==v,N=!1,D=t.prototype,_=D[p]||D["@@iterator"]||v&&D[v],I=_||x(v),S=v?b?x("entries"):I:void 0,T="Array"==e?D.entries||_:_;if(T&&(j=f(T.call(new t)))!==Object.prototype&&(l(j,M,!0),r||u(j,p)||s(j,p,y)),b&&_&&"values"!==_.name&&(N=!0,I=function(){return _.call(this)}),r&&!m||!d&&!N&&D[p]||s(D,p,I),c[e]=I,c[M]=y,v)if(L={values:b?I:x("values"),keys:g?I:x("keys"),entries:S},m)for(w in L)w in D||o(D,w,L[w]);else i(i.P+i.F*(d||N),e,L);return L}},function(t,e,n){var r=n(7),i=n(60),o=n(15),s=n(20)("IE_PROTO"),u=function(){},c=function(){var t,e=n(27)("iframe"),r=o.length;for(e.style.display="none",n(53).appendChild(e),e.src="javascript:",t=e.contentWindow.document,t.open(),t.write("<script>document.F=Object<\/script>"),t.close(),c=t.F;r--;)delete c.prototype[o[r]];return c()};t.exports=Object.create||function(t,e){var n;return null!==t?(u.prototype=r(t),n=new u,u.prototype=null,n[s]=t):n=c(),void 0===e?n:i(n,e)}},function(t,e,n){var r=n(34),i=n(15).concat("length","prototype");e.f=Object.getOwnPropertyNames||function(t){return r(t,i)}},function(t,e){e.f=Object.getOwnPropertySymbols},function(t,e,n){var r=n(1),i=n(2),o=n(50)(!1),s=n(20)("IE_PROTO");t.exports=function(t,e){var n,u=i(t),c=0,a=[];for(n in u)n!=s&&r(u,n)&&a.push(n);for(;e.length>c;)r(u,n=e[c++])&&(~o(a,n)||a.push(n));return a}},function(t,e,n){t.exports=n(4)},function(t,e,n){var r=n(37),i=r.Symbol;t.exports=i},function(t,e,n){var r=n(78),i="object"==typeof self&&self&&self.Object===Object&&self,o=r||i||Function("return this")();t.exports=o},function(t,e){function n(t){var e=typeof t;return null!=t&&("object"==e||"function"==e)}t.exports=n},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var r=n(45),i=n.n(r),o=n(81),s=n.n(o);e.default={props:{source:{type:[String,Function,Array,Object],required:!0},method:{type:String,default:"get"},placeholder:{default:"Search"},initialValue:{type:[String,Number]},initialDisplay:{type:String},inputClass:{type:[String,Object]},disableInput:{type:Boolean},name:{type:String},resultsProperty:{type:String},resultsValue:{type:String,default:"id"},resultsDisplay:{type:[String,Function],default:"name"},showNoResults:{type:Boolean,default:!0},requestHeaders:{type:Object},credentials:{type:String},clearButtonIcon:{type:String},maxlength:{type:Number}},data:function(){return{value:null,display:null,results:null,selectedIndex:null,loading:!1,isFocussed:!1,error:null,selectedId:null,selectedDisplay:null,eventListener:!1}},computed:{showResults:function(){return Array.isArray(this.results)||this.hasError},noResults:function(){return Array.isArray(this.results)&&0===this.results.length},noResultMessage:function(){return this.noResults&&!this.isLoading&&this.isFocussed&&!this.hasError&&this.showNoResults},isEmpty:function(){return!this.display},isLoading:function(){return!0===this.loading},hasError:function(){return null!==this.error},listStyle:function(){if(this.isLoading)return{color:"#ccc"}}},methods:{search:function(){switch(this.selectedIndex=null,!0){case"string"==typeof this.source:if(!this.display||this.display.length<1)return;return this.resourceSearch(this.source+this.display);case"function"==typeof this.source:if(!this.display||this.display.length<1)return;return this.resourceSearch(this.source(this.display));case Array.isArray(this.source):return this.arrayLikeSearch();default:throw new TypeError}},resourceSearch:s()(function(t){if(!this.display)return void(this.results=[]);this.loading=!0,this.setEventListener(),this.request(t)},200),request:function(t){var e=this;return fetch(t,{method:this.method,credentials:this.getCredentials(),headers:this.getHeaders()}).then(function(t){if(t.ok)return e.error=null,t.json();throw new Error("Network response was not ok.")}).then(function(t){e.results=e.setResults(t),0===e.results.length?e.$emit("noResults",{query:e.display}):e.$emit("results",{results:e.results}),e.loading=!1}).catch(function(t){e.error=t.message,e.loading=!1})},getHeaders:function(){var t={Accept:"application/json, text/plain, */*"};if(this.requestHeaders)for(var e in this.requestHeaders)t[e]=this.requestHeaders[e];return new Headers(t)},getCredentials:function(){var t="same-origin";return this.credentials&&(t=this.credentials),t},setResults:function(t){return this.resultsProperty&&t[this.resultsProperty]?t[this.resultsProperty]:Array.isArray(t)?t:[]},arrayLikeSearch:function(){var t=this;if(this.setEventListener(),!this.display)return this.results=this.source,this.$emit("results",{results:this.results}),this.loading=!1,!0;this.results=this.source.filter(function(e){return t.formatDisplay(e).toLowerCase().includes(t.display.toLowerCase())}),this.$emit("results",{results:this.results}),this.loading=!1},select:function(t){t&&(this.value=this.resultsValue&&t[this.resultsValue]?t[this.resultsValue]:t.id,this.display=this.formatDisplay(t),this.selectedDisplay=this.display,this.$emit("selected",{value:this.value,display:this.display,selectedObject:t}),this.$emit("input",this.value),this.close())},formatDisplay:function(t){switch(i()(this.resultsDisplay)){case"function":return this.resultsDisplay(t);case"string":if(!t[this.resultsDisplay])throw new Error('"'+this.resultsDisplay+'" property expected on result but is not defined.');return t[this.resultsDisplay];default:throw new TypeError}},focus:function(){this.isFocussed=!0},blur:function(){this.isFocussed=!1},isSelected:function(t){return t===this.selectedIndex},up:function(){if(null===this.selectedIndex)return void(this.selectedIndex=this.results.length-1);this.selectedIndex=0===this.selectedIndex?this.results.length-1:this.selectedIndex-1},down:function(){if(null===this.selectedIndex)return void(this.selectedIndex=0);this.selectedIndex=this.selectedIndex===this.results.length-1?0:this.selectedIndex+1},enter:function(){if(null===this.selectedIndex)return void this.$emit("nothingSelected",this.display);this.select(this.results[this.selectedIndex]),this.$emit("enter",this.display)},clear:function(){this.display=null,this.value=null,this.results=null,this.error=null,this.$emit("clear")},close:function(){this.value&&this.selectedDisplay||this.clear(),this.selectedDisplay!==this.display&&this.value&&(this.display=this.selectedDisplay),this.results=null,this.error=null,this.removeEventListener(),this.$emit("close")},setEventListener:function(){return!this.eventListener&&(this.eventListener=!0,document.addEventListener("click",this.clickOutsideListener,!0),!0)},removeEventListener:function(){this.eventListener=!1,document.removeEventListener("click",this.clickOutsideListener,!0)},clickOutsideListener:function(t){this.$el&&!this.$el.contains(t.target)&&this.close()}},mounted:function(){this.value=this.initialValue,this.display=this.initialDisplay,this.selectedDisplay=this.initialDisplay}}},function(t,e){t.exports=function(t,e,n,r,i){var o,s=t=t||{},u=typeof t.default;"object"!==u&&"function"!==u||(o=t,s=t.default);var c="function"==typeof s?s.options:s;e&&(c.render=e.render,c.staticRenderFns=e.staticRenderFns),r&&(c._scopeId=r);var a;if(i?(a=function(t){t=t||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext,t||"undefined"==typeof __VUE_SSR_CONTEXT__||(t=__VUE_SSR_CONTEXT__),n&&n.call(this,t),t&&t._registeredComponents&&t._registeredComponents.add(i)},c._ssrRegister=a):n&&(a=n),a){var l=c.functional,f=l?c.render:c.beforeCreate;l?c.render=function(t,e){return a.call(e),f(t,e)}:c.beforeCreate=f?[].concat(f,a):[a]}return{esModule:o,exports:s,options:c}}},function(t,e,n){t.exports={render:function(){var t=this,e=t.$createElement,r=t._self._c||e;return r("div",{staticClass:"autocomplete"},[r("div",{staticClass:"autocomplete__box",class:{autocomplete__searching:t.showResults}},[t.isLoading?r("img",{staticClass:"autocomplete__icon animate-spin",attrs:{src:n(87)}}):r("img",{staticClass:"autocomplete__icon",attrs:{src:n(88)}}),t._v(" "),r("div",{staticClass:"autocomplete__inputs"},[r("input",{directives:[{name:"model",rawName:"v-model",value:t.display,expression:"display"}],class:t.inputClass,attrs:{placeholder:t.placeholder,disabled:t.disableInput,maxlength:t.maxlength,type:"text",autocomplete:"off"},domProps:{value:t.display},on:{click:t.search,input:[function(e){e.target.composing||(t.display=e.target.value)},t.search],keydown:[function(e){if(!("button"in e)&&t._k(e.keyCode,"enter",13,e.key))return null;t.enter(e)},function(e){if(!("button"in e)&&t._k(e.keyCode,"tab",9,e.key))return null;t.close(e)},function(e){if(!("button"in e)&&t._k(e.keyCode,"up",38,e.key))return null;t.up(e)},function(e){if(!("button"in e)&&t._k(e.keyCode,"down",40,e.key))return null;t.down(e)},function(e){if(!("button"in e)&&t._k(e.keyCode,"esc",27,e.key))return null;t.close(e)}],focus:t.focus,blur:t.blur}}),t._v(" "),r("input",{attrs:{name:t.name,type:"hidden"},domProps:{value:t.value}})]),t._v(" "),r("span",{directives:[{name:"show",rawName:"v-show",value:!(t.disableInput||t.isEmpty||t.isLoading||t.hasError),expression:"!disableInput && !isEmpty && !isLoading && !hasError"}],staticClass:"autocomplete__icon autocomplete--clear",on:{click:t.clear}},[t.clearButtonIcon?r("span",{class:t.clearButtonIcon}):r("img",{attrs:{src:n(86)}})])]),t._v(" "),r("ul",{directives:[{name:"show",rawName:"v-show",value:t.showResults,expression:"showResults"}],staticClass:"autocomplete__results",style:t.listStyle},[t._t("results",[t.hasError?r("li",{staticClass:"autocomplete__results__item autocomplete__results__item--error"},[t._v(t._s(t.error))]):t._e(),t._v(" "),t.hasError?t._e():[t._t("firstResult"),t._v(" "),t._l(t.results,function(e,n){return r("li",{key:n,staticClass:"autocomplete__results__item",class:{autocomplete__selected:t.isSelected(n)},domProps:{innerHTML:t._s(t.formatDisplay(e))},on:{click:function(n){n.preventDefault(),t.select(e)}}})}),t._v(" "),t._t("lastResult")],t._v(" "),t.noResultMessage?r("li",{staticClass:"autocomplete__results__item autocomplete__no-results"},[t._t("noResults",[t._v("No Results.")])],2):t._e()])],2)])},staticRenderFns:[]}},function(t,e,n){var r=n(75);"string"==typeof r&&(r=[[t.i,r,""]]),r.locals&&(t.exports=r.locals);n(90)("1bef4852",r,!0)},function(t,e,n){t.exports={default:n(46),__esModule:!0}},function(t,e,n){t.exports={default:n(47),__esModule:!0}},function(t,e,n){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}e.__esModule=!0;var i=n(44),o=r(i),s=n(43),u=r(s),c="function"==typeof u.default&&"symbol"==typeof o.default?function(t){return typeof t}:function(t){return t&&"function"==typeof u.default&&t.constructor===u.default&&t!==u.default.prototype?"symbol":typeof t};e.default="function"==typeof u.default&&"symbol"===c(o.default)?function(t){return void 0===t?"undefined":c(t)}:function(t){return t&&"function"==typeof u.default&&t.constructor===u.default&&t!==u.default.prototype?"symbol":void 0===t?"undefined":c(t)}},function(t,e,n){n(71),n(69),n(72),n(73),t.exports=n(13).Symbol},function(t,e,n){n(70),n(74),t.exports=n(25).f("iterator")},function(t,e){t.exports=function(t){if("function"!=typeof t)throw TypeError(t+" is not a function!");return t}},function(t,e){t.exports=function(){}},function(t,e,n){var r=n(2),i=n(66),o=n(65);t.exports=function(t){return function(e,n,s){var u,c=r(e),a=i(c.length),l=o(s,a);if(t&&n!=n){for(;a>l;)if((u=c[l++])!=u)return!0}else for(;a>l;l++)if((t||l in c)&&c[l]===n)return t||l||0;return!t&&-1}}},function(t,e,n){var r=n(48);t.exports=function(t,e,n){if(r(t),void 0===e)return t;switch(n){case 1:return function(n){return t.call(e,n)};case 2:return function(n,r){return t.call(e,n,r)};case 3:return function(n,r,i){return t.call(e,n,r,i)}}return function(){return t.apply(e,arguments)}}},function(t,e,n){var r=n(10),i=n(33),o=n(18);t.exports=function(t){var e=r(t),n=i.f;if(n)for(var s,u=n(t),c=o.f,a=0;u.length>a;)c.call(t,s=u[a++])&&e.push(s);return e}},function(t,e,n){t.exports=n(0).document&&document.documentElement},function(t,e,n){var r=n(26);t.exports=Object("z").propertyIsEnumerable(0)?Object:function(t){return"String"==r(t)?t.split(""):Object(t)}},function(t,e,n){var r=n(26);t.exports=Array.isArray||function(t){return"Array"==r(t)}},function(t,e,n){"use strict";var r=n(31),i=n(11),o=n(19),s={};n(4)(s,n(6)("iterator"),function(){return this}),t.exports=function(t,e,n){t.prototype=r(s,{next:i(1,n)}),o(t,e+" Iterator")}},function(t,e){t.exports=function(t,e){return{value:e,done:!!t}}},function(t,e,n){var r=n(10),i=n(2);t.exports=function(t,e){for(var n,o=i(t),s=r(o),u=s.length,c=0;u>c;)if(o[n=s[c++]]===e)return n}},function(t,e,n){var r=n(12)("meta"),i=n(9),o=n(1),s=n(5).f,u=0,c=Object.isExtensible||function(){return!0},a=!n(8)(function(){return c(Object.preventExtensions({}))}),l=function(t){s(t,r,{value:{i:"O"+ ++u,w:{}}})},f=function(t,e){if(!i(t))return"symbol"==typeof t?t:("string"==typeof t?"S":"P")+t;if(!o(t,r)){if(!c(t))return"F";if(!e)return"E";l(t)}return t[r].i},p=function(t,e){if(!o(t,r)){if(!c(t))return!0;if(!e)return!1;l(t)}return t[r].w},d=function(t){return a&&y.NEED&&c(t)&&!o(t,r)&&l(t),t},y=t.exports={KEY:r,NEED:!1,fastKey:f,getWeak:p,onFreeze:d}},function(t,e,n){var r=n(5),i=n(7),o=n(10);t.exports=n(3)?Object.defineProperties:function(t,e){i(t);for(var n,s=o(e),u=s.length,c=0;u>c;)r.f(t,n=s[c++],e[n]);return t}},function(t,e,n){var r=n(18),i=n(11),o=n(2),s=n(23),u=n(1),c=n(29),a=Object.getOwnPropertyDescriptor;e.f=n(3)?a:function(t,e){if(t=o(t),e=s(e,!0),c)try{return a(t,e)}catch(t){}if(u(t,e))return i(!r.f.call(t,e),t[e])}},function(t,e,n){var r=n(2),i=n(32).f,o={}.toString,s="object"==typeof window&&window&&Object.getOwnPropertyNames?Object.getOwnPropertyNames(window):[],u=function(t){try{return i(t)}catch(t){return s.slice()}};t.exports.f=function(t){return s&&"[object Window]"==o.call(t)?u(t):i(r(t))}},function(t,e,n){var r=n(1),i=n(67),o=n(20)("IE_PROTO"),s=Object.prototype;t.exports=Object.getPrototypeOf||function(t){return t=i(t),r(t,o)?t[o]:"function"==typeof t.constructor&&t instanceof t.constructor?t.constructor.prototype:t instanceof Object?s:null}},function(t,e,n){var r=n(22),i=n(14);t.exports=function(t){return function(e,n){var o,s,u=String(i(e)),c=r(n),a=u.length;return c<0||c>=a?t?"":void 0:(o=u.charCodeAt(c),o<55296||o>56319||c+1===a||(s=u.charCodeAt(c+1))<56320||s>57343?t?u.charAt(c):o:t?u.slice(c,c+2):s-56320+(o-55296<<10)+65536)}}},function(t,e,n){var r=n(22),i=Math.max,o=Math.min;t.exports=function(t,e){return t=r(t),t<0?i(t+e,0):o(t,e)}},function(t,e,n){var r=n(22),i=Math.min;t.exports=function(t){return t>0?i(r(t),9007199254740991):0}},function(t,e,n){var r=n(14);t.exports=function(t){return Object(r(t))}},function(t,e,n){"use strict";var r=n(49),i=n(57),o=n(16),s=n(2);t.exports=n(30)(Array,"Array",function(t,e){this._t=s(t),this._i=0,this._k=e},function(){var t=this._t,e=this._k,n=this._i++;return!t||n>=t.length?(this._t=void 0,i(1)):"keys"==e?i(0,n):"values"==e?i(0,t[n]):i(0,[n,t[n]])},"values"),o.Arguments=o.Array,r("keys"),r("values"),r("entries")},function(t,e){},function(t,e,n){"use strict";var r=n(64)(!0);n(30)(String,"String",function(t){this._t=String(t),this._i=0},function(){var t,e=this._t,n=this._i;return n>=e.length?{value:void 0,done:!0}:(t=r(e,n),this._i+=t.length,{value:t,done:!1})})},function(t,e,n){"use strict";var r=n(0),i=n(1),o=n(3),s=n(28),u=n(35),c=n(59).KEY,a=n(8),l=n(21),f=n(19),p=n(12),d=n(6),y=n(25),h=n(24),v=n(58),g=n(52),m=n(55),L=n(7),w=n(2),j=n(23),x=n(11),M=n(31),b=n(62),N=n(61),D=n(5),_=n(10),I=N.f,S=D.f,T=b.f,O=r.Symbol,C=r.JSON,E=C&&C.stringify,k=d("_hidden"),z=d("toPrimitive"),P={}.propertyIsEnumerable,A=l("symbol-registry"),Y=l("symbols"),R=l("op-symbols"),B=Object.prototype,U="function"==typeof O,H=r.QObject,G=!H||!H.prototype||!H.prototype.findChild,Q=o&&a(function(){return 7!=M(S({},"a",{get:function(){return S(this,"a",{value:7}).a}})).a})?function(t,e,n){var r=I(B,e);r&&delete B[e],S(t,e,n),r&&t!==B&&S(B,e,r)}:S,J=function(t){var e=Y[t]=M(O.prototype);return e._k=t,e},Z=U&&"symbol"==typeof O.iterator?function(t){return"symbol"==typeof t}:function(t){return t instanceof O},W=function(t,e,n){return t===B&&W(R,e,n),L(t),e=j(e,!0),L(n),i(Y,e)?(n.enumerable?(i(t,k)&&t[k][e]&&(t[k][e]=!1),n=M(n,{enumerable:x(0,!1)})):(i(t,k)||S(t,k,x(1,{})),t[k][e]=!0),Q(t,e,n)):S(t,e,n)},F=function(t,e){L(t);for(var n,r=g(e=w(e)),i=0,o=r.length;o>i;)W(t,n=r[i++],e[n]);return t},$=function(t,e){return void 0===e?M(t):F(M(t),e)},V=function(t){var e=P.call(this,t=j(t,!0));return!(this===B&&i(Y,t)&&!i(R,t))&&(!(e||!i(this,t)||!i(Y,t)||i(this,k)&&this[k][t])||e)},K=function(t,e){if(t=w(t),e=j(e,!0),t!==B||!i(Y,e)||i(R,e)){var n=I(t,e);return!n||!i(Y,e)||i(t,k)&&t[k][e]||(n.enumerable=!0),n}},X=function(t){for(var e,n=T(w(t)),r=[],o=0;n.length>o;)i(Y,e=n[o++])||e==k||e==c||r.push(e);return r},q=function(t){for(var e,n=t===B,r=T(n?R:w(t)),o=[],s=0;r.length>s;)!i(Y,e=r[s++])||n&&!i(B,e)||o.push(Y[e]);return o};U||(O=function(){if(this instanceof O)throw TypeError("Symbol is not a constructor!");var t=p(arguments.length>0?arguments[0]:void 0),e=function(n){this===B&&e.call(R,n),i(this,k)&&i(this[k],t)&&(this[k][t]=!1),Q(this,t,x(1,n))};return o&&G&&Q(B,t,{configurable:!0,set:e}),J(t)},u(O.prototype,"toString",function(){return this._k}),N.f=K,D.f=W,n(32).f=b.f=X,n(18).f=V,n(33).f=q,o&&!n(17)&&u(B,"propertyIsEnumerable",V,!0),y.f=function(t){return J(d(t))}),s(s.G+s.W+s.F*!U,{Symbol:O});for(var tt="hasInstance,isConcatSpreadable,iterator,match,replace,search,species,split,toPrimitive,toStringTag,unscopables".split(","),et=0;tt.length>et;)d(tt[et++]);for(var tt=_(d.store),et=0;tt.length>et;)h(tt[et++]);s(s.S+s.F*!U,"Symbol",{for:function(t){return i(A,t+="")?A[t]:A[t]=O(t)},keyFor:function(t){if(Z(t))return v(A,t);throw TypeError(t+" is not a symbol!")},useSetter:function(){G=!0},useSimple:function(){G=!1}}),s(s.S+s.F*!U,"Object",{create:$,defineProperty:W,defineProperties:F,getOwnPropertyDescriptor:K,getOwnPropertyNames:X,getOwnPropertySymbols:q}),C&&s(s.S+s.F*(!U||a(function(){var t=O();return"[null]"!=E([t])||"{}"!=E({a:t})||"{}"!=E(Object(t))})),"JSON",{stringify:function(t){if(void 0!==t&&!Z(t)){for(var e,n,r=[t],i=1;arguments.length>i;)r.push(arguments[i++]);return e=r[1],"function"==typeof e&&(n=e),!n&&m(e)||(e=function(t,e){if(n&&(e=n.call(this,t,e)),!Z(e))return e}),r[1]=e,E.apply(C,r)}}}),O.prototype[z]||n(4)(O.prototype,z,O.prototype.valueOf),f(O,"Symbol"),f(Math,"Math",!0),f(r.JSON,"JSON",!0)},function(t,e,n){n(24)("asyncIterator")},function(t,e,n){n(24)("observable")},function(t,e,n){n(68);for(var r=n(0),i=n(4),o=n(16),s=n(6)("toStringTag"),u=["NodeList","DOMTokenList","MediaList","StyleSheetList","CSSRuleList"],c=0;c<5;c++){var a=u[c],l=r[a],f=l&&l.prototype;f&&!f[s]&&i(f,s,a),o[a]=o.Array}},function(t,e,n){e=t.exports=n(76)(!1),e.push([t.i,".autocomplete{position:relative;width:100%}.autocomplete *{box-sizing:border-box}.autocomplete__box{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background:#fff;border:1px solid #ccc;border-radius:3px;padding:0 5px}.autocomplete__searching{border-radius:3px 3px 0 0}.autocomplete__inputs{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;padding:0 5px}.autocomplete__inputs input{width:100%;border:0}.autocomplete__inputs input:focus{outline:none}.autocomplete--clear{cursor:pointer}.autocomplete__results{margin:0;padding:0;list-style-type:none;z-index:1000;position:absolute;max-height:400px;overflow-y:auto;background:#fff;width:100%;border:1px solid #ccc;border-top:0;color:#000}.autocomplete__results__item--error{color:red}.autocomplete__results__item{padding:7px 10px;cursor:pointer}.autocomplete__results__item:hover{background:rgba(0,180,255,.075)}.autocomplete__results__item.autocomplete__selected{background:rgba(0,180,255,.15)}.autocomplete__icon{height:14px;width:14px}.animate-spin{-webkit-animation:spin 2s infinite linear;animation:spin 2s infinite linear}@-webkit-keyframes spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}@keyframes spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}",""])},function(t,e){function n(t,e){var n=t[1]||"",i=t[3];if(!i)return n;if(e&&"function"==typeof btoa){var o=r(i);return[n].concat(i.sources.map(function(t){return"/*# sourceURL="+i.sourceRoot+t+" */"})).concat([o]).join("\n")}return[n].join("\n")}function r(t){return"/*# sourceMappingURL=data:application/json;charset=utf-8;base64,"+btoa(unescape(encodeURIComponent(JSON.stringify(t))))+" */"}t.exports=function(t){var e=[];return e.toString=function(){return this.map(function(e){var r=n(e,t);return e[2]?"@media "+e[2]+"{"+r+"}":r}).join("")},e.i=function(t,n){"string"==typeof t&&(t=[[null,t,""]]);for(var r={},i=0;i<this.length;i++){var o=this[i][0];"number"==typeof o&&(r[o]=!0)}for(i=0;i<t.length;i++){var s=t[i];"number"==typeof s[0]&&r[s[0]]||(n&&!s[2]?s[2]=n:n&&(s[2]="("+s[2]+") and ("+n+")"),e.push(s))}},e}},function(t,e,n){function r(t){return null==t?void 0===t?c:u:a&&a in Object(t)?o(t):s(t)}var i=n(36),o=n(79),s=n(80),u="[object Null]",c="[object Undefined]",a=i?i.toStringTag:void 0;t.exports=r},function(t,e,n){(function(e){var n="object"==typeof e&&e&&e.Object===Object&&e;t.exports=n}).call(e,n(92))},function(t,e,n){function r(t){var e=s.call(t,c),n=t[c];try{t[c]=void 0;var r=!0}catch(t){}var i=u.call(t);return r&&(e?t[c]=n:delete t[c]),i}var i=n(36),o=Object.prototype,s=o.hasOwnProperty,u=o.toString,c=i?i.toStringTag:void 0;t.exports=r},function(t,e){function n(t){return i.call(t)}var r=Object.prototype,i=r.toString;t.exports=n},function(t,e,n){function r(t,e,n){function r(e){var n=m,r=L;return m=L=void 0,b=e,j=t.apply(r,n)}function l(t){return b=t,x=setTimeout(d,e),N?r(t):j}function f(t){var n=t-M,r=t-b,i=e-n;return D?a(i,w-r):i}function p(t){var n=t-M,r=t-b;return void 0===M||n>=e||n<0||D&&r>=w}function d(){var t=o();if(p(t))return y(t);x=setTimeout(d,f(t))}function y(t){return x=void 0,_&&m?r(t):(m=L=void 0,j)}function h(){void 0!==x&&clearTimeout(x),b=0,m=M=L=x=void 0}function v(){return void 0===x?j:y(o())}function g(){var t=o(),n=p(t);if(m=arguments,L=this,M=t,n){if(void 0===x)return l(M);if(D)return x=setTimeout(d,e),r(M)}return void 0===x&&(x=setTimeout(d,e)),j}var m,L,w,j,x,M,b=0,N=!1,D=!1,_=!0;if("function"!=typeof t)throw new TypeError(u);return e=s(e)||0,i(n)&&(N=!!n.leading,D="maxWait"in n,w=D?c(s(n.maxWait)||0,e):w,_="trailing"in n?!!n.trailing:_),g.cancel=h,g.flush=v,g}var i=n(38),o=n(84),s=n(85),u="Expected a function",c=Math.max,a=Math.min;t.exports=r},function(t,e){function n(t){return null!=t&&"object"==typeof t}t.exports=n},function(t,e,n){function r(t){return"symbol"==typeof t||o(t)&&i(t)==s}var i=n(77),o=n(82),s="[object Symbol]";t.exports=r},function(t,e,n){var r=n(37),i=function(){return r.Date.now()};t.exports=i},function(t,e,n){function r(t){if("number"==typeof t)return t;if(o(t))return s;if(i(t)){var e="function"==typeof t.valueOf?t.valueOf():t;t=i(e)?e+"":e}if("string"!=typeof t)return 0===t?t:+t;t=t.replace(u,"");var n=a.test(t);return n||l.test(t)?f(t.slice(2),n?2:8):c.test(t)?s:+t}var i=n(38),o=n(83),s=NaN,u=/^\s+|\s+$/g,c=/^[-+]0x[0-9a-f]+$/i,a=/^0b[01]+$/i,l=/^0o[0-7]+$/i,f=parseInt;t.exports=r},function(t,e){t.exports="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMTQ0IC0xNTQgMTEwMCAxMTAwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDE0NCAtMTU0IDExMDAgMTEwMDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgZmlsbD0iIzk5OSI+DQoJPHBhdGggZD0iTTExNTguNyw1My42TDgxNi4zLDM5NmwzNDIuNCwzNDIuNGwwLDBjMTUuNywxNS43LDI1LjMsMzcuMywyNS4zLDYxLjFjMCw0Ny43LTM4LjcsODYuNS04Ni41LDg2LjUNCgkJYy0yMy45LDAtNDUuNS05LjctNjEuMS0yNS4zbDAsMEw2OTQsNTE4LjNMMzUxLjYsODYwLjdsMCwwQzMzNiw4NzYuMywzMTQuMyw4ODYsMjkwLjUsODg2Yy00Ny44LDAtODYuNS0zOC43LTg2LjUtODYuNQ0KCQljMC0yMy45LDkuNy00NS41LDI1LjMtNjEuMWwwLDBMNTcxLjcsMzk2TDIyOS4zLDUzLjZsMCwwQzIxMy43LDM4LDIwNCwxNi4zLDIwNC03LjVjMC00Ny44LDM4LjctODYuNSw4Ni41LTg2LjUNCgkJYzIzLjksMCw0NS41LDkuNyw2MS4xLDI1LjNsMCwwTDY5NCwyNzMuN2wzNDIuNC0zNDIuNGwwLDBjMTUuNi0xNS42LDM3LjMtMjUuMyw2MS4xLTI1LjNjNDcuOCwwLDg2LjUsMzguNyw4Ni41LDg2LjUNCgkJQzExODQsMTYuMywxMTc0LjMsMzgsMTE1OC43LDUzLjZMMTE1OC43LDUzLjZ6Ii8+DQo8L2c+DQo8L3N2Zz4NCg=="},function(t,e){t.exports="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iLTE4IDE3MiA0NTAgNDUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IC0xOCAxNzIgNDUwIDQ1MDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgZmlsbD0iIzk5OSI+DQoJPHBhdGggZD0iTTIyNi43LDI4OWMwLDEwLjktOC44LDE5LjctMTkuNywxOS43bDAsMGMtMTAuOSwwLTE5LjctOC44LTE5LjctMTkuN3YtOTYuNmMwLTEwLjksOC44LTE5LjcsMTkuNy0xOS43bDAsMA0KCQljMTAuOCwwLDE5LjcsOC44LDE5LjcsMTkuN1YyODl6Ii8+DQoJPHBhdGggZD0iTTIyNi43LDYwMS42YzAsMTAuOS04LjgsMTkuNy0xOS43LDE5LjdsMCwwYy0xMC45LDAtMTkuNy04LjgtMTkuNy0xOS43VjUwNWMwLTEwLjksOC44LTE5LjcsMTkuNy0xOS43bDAsMA0KCQljMTAuOCwwLDE5LjcsOC44LDE5LjcsMTkuN1Y2MDEuNkwyMjYuNyw2MDEuNnoiLz4NCgk8cGF0aCBkPSJNOTksMzc3LjNjMTAuOSwwLDE5LjcsOC44LDE5LjcsMTkuNmwwLDBjMCwxMC45LTguOCwxOS43LTE5LjcsMTkuN0gyLjRjLTEwLjksMC0xOS43LTguOC0xOS43LTE5LjdsMCwwDQoJCWMwLTEwLjksOC44LTE5LjYsMTkuNy0xOS42SDk5eiIvPg0KCTxwYXRoIGQ9Ik00MTEuNiwzNzcuM2MxMC45LDAsMTkuNyw4LjgsMTkuNywxOS42bDAsMGMwLDEwLjktOC44LDE5LjctMTkuNywxOS43SDMxNWMtMTAuOSwwLTE5LjctOC44LTE5LjctMTkuN2wwLDANCgkJYzAtMTAuOSw4LjgtMTkuNiwxOS43LTE5LjZINDExLjZ6Ii8+DQoJPHBhdGggZD0iTTE0NC41LDMwNi43YzcuNyw3LjcsNy43LDIwLjEsMCwyNy44bDAsMGMtNy43LDcuNy0yMC4yLDcuNy0yNy45LDBsLTY4LjMtNjguM2MtNy43LTcuNy03LjctMjAuMSwwLTI3LjlsMCwwDQoJCWM3LjctNy43LDIwLjEtNy43LDI3LjgsMEwxNDQuNSwzMDYuN0wxNDQuNSwzMDYuN3oiLz4NCgk8cGF0aCBkPSJNMzY1LjYsNTI3LjhjNy43LDcuNyw3LjcsMjAuMiwwLDI3LjlsMCwwYy03LjcsNy43LTIwLjEsNy43LTI3LjgtMC4xbC02OC4zLTY4LjNjLTcuNy03LjctNy43LTIwLjIsMC0yNy45bDAsMA0KCQljNy43LTcuNywyMC4yLTcuNywyNy44LDBMMzY1LjYsNTI3LjhMMzY1LjYsNTI3Ljh6Ii8+DQoJPHBhdGggZD0iTTExNi43LDQ1OS41YzcuNy03LjcsMjAuMi03LjcsMjcuOSwwbDAsMGM3LjcsNy43LDcuNywyMC4yLDAsMjcuOWwtNjguMyw2OC4zYy03LjcsNy43LTIwLjEsNy43LTI3LjgtMC4xbDAsMA0KCQljLTcuNy03LjctNy43LTIwLjEsMC0yNy44TDExNi43LDQ1OS41eiIvPg0KCTxwYXRoIGQ9Ik0zMzcuOCwyMzguNGM3LjctNy43LDIwLjEtNy43LDI3LjgsMGwwLDBjNy43LDcuNyw3LjcsMjAuMiwwLDI3LjlsLTY4LjMsNjguM2MtNy43LDcuNy0yMC4yLDcuNy0yNy44LDBsMCwwDQoJCWMtNy43LTcuNy03LjctMjAuMiwwLTI3LjhMMzM3LjgsMjM4LjRMMzM3LjgsMjM4LjR6Ii8+DQo8L2c+DQo8L3N2Zz4NCg=="},function(t,e){t.exports="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiB2aWV3Qm94PSIwIDAgMTYgMTYiPgogIDxnPgogICAgPHBhdGggc3Ryb2tlPSIjOTk5IiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSIgZD0iTTExIDExbDMuNSAzLjUiPjwvcGF0aD4KICAgIDxjaXJjbGUgc3Ryb2tlPSIjOTk5IiBzdHJva2Utd2lkdGg9IjIiIGN4PSI2LjUiIGN5PSI2LjUiIHI9IjUuNSIgZmlsbD0ibm9uZSI+PC9jaXJjbGU+CiAgPC9nPgo8L3N2Zz4K"},function(t,e,n){function r(t){n(42)}var i=n(40)(n(39),n(41),r,null,null);t.exports=i.exports},function(t,e,n){function r(t){for(var e=0;e<t.length;e++){var n=t[e],r=l[n.id];if(r){r.refs++;for(var i=0;i<r.parts.length;i++)r.parts[i](n.parts[i]);for(;i<n.parts.length;i++)r.parts.push(o(n.parts[i]));r.parts.length>n.parts.length&&(r.parts.length=n.parts.length)}else{for(var s=[],i=0;i<n.parts.length;i++)s.push(o(n.parts[i]));l[n.id]={id:n.id,refs:1,parts:s}}}}function i(){var t=document.createElement("style");return t.type="text/css",f.appendChild(t),t}function o(t){var e,n,r=document.querySelector('style[data-vue-ssr-id~="'+t.id+'"]');if(r){if(y)return h;r.parentNode.removeChild(r)}if(v){var o=d++;r=p||(p=i()),e=s.bind(null,r,o,!1),n=s.bind(null,r,o,!0)}else r=i(),e=u.bind(null,r),n=function(){r.parentNode.removeChild(r)};return e(t),function(r){if(r){if(r.css===t.css&&r.media===t.media&&r.sourceMap===t.sourceMap)return;e(t=r)}else n()}}function s(t,e,n,r){var i=n?"":r.css;if(t.styleSheet)t.styleSheet.cssText=g(e,i);else{var o=document.createTextNode(i),s=t.childNodes;s[e]&&t.removeChild(s[e]),s.length?t.insertBefore(o,s[e]):t.appendChild(o)}}function u(t,e){var n=e.css,r=e.media,i=e.sourceMap;if(r&&t.setAttribute("media",r),i&&(n+="\n/*# sourceURL="+i.sources[0]+" */",n+="\n/*# sourceMappingURL=data:application/json;base64,"+btoa(unescape(encodeURIComponent(JSON.stringify(i))))+" */"),t.styleSheet)t.styleSheet.cssText=n;else{for(;t.firstChild;)t.removeChild(t.firstChild);t.appendChild(document.createTextNode(n))}}var c="undefined"!=typeof document;if(false)throw new Error("vue-style-loader cannot be used in a non-browser environment. Use { target: 'node' } in your Webpack config to indicate a server-rendering environment.");var a=n(91),l={},f=c&&(document.head||document.getElementsByTagName("head")[0]),p=null,d=0,y=!1,h=function(){},v="undefined"!=typeof navigator&&/msie [6-9]\b/.test(navigator.userAgent.toLowerCase());t.exports=function(t,e,n){y=n;var i=a(t,e);return r(i),function(e){for(var n=[],o=0;o<i.length;o++){var s=i[o],u=l[s.id];u.refs--,n.push(u)}e?(i=a(t,e),r(i)):i=[];for(var o=0;o<n.length;o++){var u=n[o];if(0===u.refs){for(var c=0;c<u.parts.length;c++)u.parts[c]();delete l[u.id]}}}};var g=function(){var t=[];return function(e,n){return t[e]=n,t.filter(Boolean).join("\n")}}()},function(t,e){t.exports=function(t,e){for(var n=[],r={},i=0;i<e.length;i++){var o=e[i],s=o[0],u=o[1],c=o[2],a=o[3],l={id:t+":"+i,css:u,media:c,sourceMap:a};r[s]?r[s].parts.push(l):n.push(r[s]={id:s,parts:[l]})}return n}},function(t,e){var n;n=function(){return this}();try{n=n||Function("return this")()||(0,eval)("this")}catch(t){"object"==typeof window&&(n=window)}t.exports=n}])});
 
 /***/ }),
 /* 21 */
+/***/ (function(module, exports) {
+
+	module.exports = "<div class=\"col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1\">\r\n    <div class=\"page-header\">\r\n        <h1 class=\"text-center docs-logotype\">COE Test Automation Sample App</h1>\r\n    </div>\r\n    <p>\r\n        <strong>Based on Vue.js and Bootstrap</strong>\r\n    </p>\r\n    <p class=\"md-content\">\r\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam pellentesque elit eget varius. Pellentesque vestibulum varius rhoncus. Sed vel hendrerit ligula, at iaculis urna. Phasellus massa nisi, commodo ac porttitor nec, bibendum vel lorem. Nunc consectetur massa a diam viverra, in ornare ligula dictum. Aenean libero eros, euismod et orci eget, sodales fermentum mi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam molestie feugiat bibendum. Nunc non finibus enim. Donec eget fringilla dolor. <span class=\"md-ink-ripple\">Integer nec hendrerit arcu.</span>\r\n    </p>\r\n    <p class=\"text-center\" v-if=\"!$root.isAuthenticated\">\r\n        <a id=\"sign-in\" class=\"btn btn-lg btn-default\" v-link=\"'/signin'\">Sign In</a>\r\n        <a id=\"sign-up\" class=\"btn btn-lg btn-default\" v-link=\"'/signup'\">Sign Up</a>\r\n    </p>\r\n\t<p>Checkbox:\r\n\t  <input type=\"checkbox\" name=\"checkboxinput\" value=\"1\"> checkbox 1<br>\r\n\t  <input type=\"checkbox\" name=\"checkboxinput2\" value=\"2\"> checkbox 2\r\n    </p>\r\n\t<p>Radio:\r\n\t  <input name=\"_fsradio2\" type=\"radio\" value=\"1\">\r\n\t  <input name=\"_fsradio2\" type=\"radio\" value=\"2\">\r\n    </p>\r\n\t<p>Input text:\r\n\t  <input type=\"text\" name=\"textinput\" value=\"\">\r\n    </p>\r\n\t<div class=\"example\">\r\n\t  <h3>Dropdown List</h3>\r\n\t  <select id=\"dropdown\" name=\"documentation-version\">\r\n\t\t  <option value=\"\" disabled=\"disabled\" selected=\"selected\">Please select an option</option>\r\n\t\t  <option value=\"1\">Option 1</option>\r\n\t\t  <option value=\"2\">Option 2</option>\r\n\t  </select>\r\n\t</div>\t\r\n\t<p>\r\n\t  User profile:<br>\r\n\t  <input type=\"text\" name=\"userfirstname\" ng-model=\"user.firstName\" value=\"\"><br>\r\n\t  <input type=\"text\" name=\"usersecondname\" ng-model=\"user.lastName\" value=\"\"><br>\r\n\t  <input type=\"text\" name=\"company\" ng-model=\"user.company\" value=\"\"><br>\r\n\t  <input type=\"button\" value=\"Save\">\r\n    </p>\r\n\t<p>\r\n\t  Text with 'abc'. And below two paragraphs with this text.\r\n    </p>\r\n\t<p>\r\n\t  Text with 'abc'.\r\n    </p>\r\n\t<p>\r\n\t  Abc abc abc. 123 123 123 .\r\n    </p>\r\n\t<p>\r\n\t  123 123 123 123 . xyz xyz xyz.\r\n    </p>\r\n\t<div class=\"example\">\r\n\t  <h3>File Downloader</h3>\r\n\t\t<a href=\"download/1.jpg\">1.jpg</a>\r\n\t\t<br>\r\n\t\t<a href=\"download/some-file.txt\">some-file.txt</a>\r\n\t\t<br>\t  \r\n\t\t<a href=\"download/1.png\">1.png</a>\r\n\t\t<br>\t  \r\n\t\t<a href=\"download/ObjectivityTestAutomationCSHarpFramework.txt\">ObjectivityTestAutomationCSHarpFramework.txt</a>\r\n\t\t<br>\t  \r\n\t\t<a href=\"download/LeapTest.AutomationStudio.exe\">LeapTest.AutomationStudio.exe</a>\r\n\t\t<br>\t  \r\n\t\t<a href=\"download/selenium-java-3.141.0.jar\">selenium-java-3.141.0.jar</a>\r\n\t\t<br>\t  \r\n\t\t<a href=\"download/uploadanddownload.txt\">uploadanddownload.txt</a>\r\n\t\t<br>\r\n\t  \r\n\t</div>\t\r\n\t<div class=\"example\">\r\n\t  <h3>Drag and Drop</h3>\r\n\t  <div id=\"columns\">\r\n\t\t<div class=\"column\" id=\"column-a\" draggable=\"true\"><header>A</header></div>\r\n\t\t<div class=\"column\" id=\"column-b\" draggable=\"true\"><header>B</header></div>\r\n\t  </div>\r\n\t</div>\t\r\n\t<p class=\"clear\">\r\n\t  Button:\r\n\t  <button id=\"abc\" name=\"name\" class=\"button\">Button</button>\r\n\t  <a href=\"#name\">Button</a>\r\n    </p>\r\n\t<p md-svg-src=\"img/icons/android.svg\">\r\n\t  SelenideSelectors test:\r\n\t  <button class=\"buy\" title=\"my_title\" value=\"my_value\">Basic Usage</button>\r\n    </p>\r\n\t<p>\r\n\t  Redundant Selectors\r\n\t  <input type=\"text\" name=\"abc\" title=\"cde\" value=\"fgh\" id=\"ijk\" class=\"xyz\">\r\n    </p>\r\n\t<p class=\"container\">\r\n\t  <span>abc</span>\r\n\t  <span class=\"subarea\">\r\n\t    <b>Bottom Sheet</b>\r\n\t  </span>\r\n\t  <ul>\r\n\t    <li>list item 1</li>\r\n\t    <li>list item 2</li>\r\n\t  </ul>\r\n    </p>\r\n\t<p>\r\n\t  Not visible text next to it, will be visible in 2 sec and disappear in 4 sec: <span class=\"waiting\">Not ready</span>\r\n    </p>\r\n\t<p>\r\n\t Autocomplete:\r\n\t<autocomplete :source=\"[{id:1,name:'abc'},{id:2,name:'def'}]\" :placeholder=\"Enter US State\"></autocomplete>\r\n    </p>\r\n\t<p>\r\n    </p>\r\n\t<p>\r\n    </p>\r\n\t<p>\r\n    </p>\r\n\t<p>\r\n    </p>\r\n\t<p>\r\n    </p>\r\n\t<p>\r\n    </p>\r\n\t<p>\r\n    </p>\r\n\t<p>\r\n    </p>\r\n\t<p>\r\n    </p>\r\n\t<p>\r\n    </p>\r\n\t<p>\r\n    </p>\r\n\t<p>\r\n    </p>\r\n</div>\r\n";
+
+/***/ }),
+/* 22 */
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -17669,19 +17713,19 @@
 	};
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports) {
 
 	module.exports = "<h1 class=\"text-center\">\r\n    <span class=\"label label-danger\">404</span>\r\n    <br />\r\n    <br />\r\n    Page Not Found\r\n</h1>";
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	module.exports = {
-	    template: __webpack_require__(24),
+	    template: __webpack_require__(25),
 	    route: {
 	        activate: function activate() {
 	            this.$root.title = 'Plans';
@@ -17690,19 +17734,19 @@
 	};
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports) {
 
 	module.exports = "<div class=\"col-lg-8 col-lg-offset-2\">\r\n    <div class=\"page-header\">\r\n        <h1 class=\"text-center\">{{ $root.title }}</h1>\r\n    </div>\r\n    <p>\r\n        Please choose your payment plan.\r\n    </p>\r\n    <p>\r\n        The provided information is just for testing purposes.\r\n    </p>\r\n    <div class=\"row\">\r\n        <div class=\"col-sm-4 plan-item\">\r\n            <h3>Basic</h3>\r\n            <b class=\"price\">$0</b> (FREE)\r\n            <p>Number of projects: <b class=\"projects-num\">1</b></p>\r\n            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam pellentesque elit eget varius.</p>\r\n            <ul class=\"feature-list\">\r\n                <li><span class=\"glyphicon glyphicon-ok\"></span>Feature 1</li>\r\n                <li><span class=\"glyphicon glyphicon-ok\"></span>Feature 2</li>\r\n            </ul>\r\n        </div>\r\n        <div class=\"col-sm-4 plan-item\">\r\n            <h3>Plus</h3>\r\n            <b class=\"price\">$19.99</b> /month\r\n            <p>Number of projects: <b class=\"projects-num\">3</b></p>\r\n            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam pellentesque elit eget varius.</p>\r\n            <ul class=\"feature-list\">\r\n                <li><span class=\"glyphicon glyphicon-ok\"></span>Feature 1</li>\r\n                <li><span class=\"glyphicon glyphicon-ok\"></span>Feature 2</li>\r\n                <li><span class=\"glyphicon glyphicon-ok\"></span>Feature 3</li>\r\n                <li><span class=\"glyphicon glyphicon-ok\"></span>Feature 4</li>\r\n            </ul>\r\n        </div>\r\n        <div class=\"col-sm-4 plan-item\">\r\n            <h3>Premium</h3>\r\n            <b class=\"price\">$49.99</b> /month\r\n            <p>Number of projects: <b class=\"projects-num\">10</b></p>\r\n            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam pellentesque elit eget varius.</p>\r\n            <ul class=\"feature-list\">\r\n                <li><span class=\"glyphicon glyphicon-ok\"></span>Feature 1</li>\r\n                <li><span class=\"glyphicon glyphicon-ok\"></span>Feature 2</li>\r\n                <li><span class=\"glyphicon glyphicon-ok\"></span>Feature 3</li>\r\n                <li><span class=\"glyphicon glyphicon-ok\"></span>Feature 4</li>\r\n                <li><span class=\"glyphicon glyphicon-ok\"></span>Feature 5</li>\r\n                <li><span class=\"glyphicon glyphicon-ok\"></span>Feature 6</li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 
 	module.exports = {
-	    template: __webpack_require__(26),
+	    template: __webpack_require__(27),
 	    data: function data() {
 	        return {
 	            items: [{ name: "Table", price: "$125.00", amount: 50 }, { name: "Chair", price: "$35.00", amount: 120 }, { name: "Desk", price: "$130.00", amount: 70 }, { name: "Wardrobe", price: "$280.00", amount: 5 }, { name: "Armchair", price: "$180.00", amount: 15 }],
@@ -17764,19 +17808,19 @@
 	};
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports) {
 
 	module.exports = "<div class=\"col-md-12\">\r\n    <div class=\"page-header\">\r\n        <h1 class=\"text-center\">{{ $root.title }}</h1>\r\n    </div>\r\n    <div class=\"table-responsive\">\r\n        <table class=\"table table-hover\">\r\n            <thead>\r\n                <tr>\r\n                    <th>Name</th>\r\n                    <th>Price</th>\r\n                    <th>Amount</th>\r\n                    <th></th>\r\n                </tr>\r\n            </thead>\r\n            <tbody>\r\n                <tr v-for=\"item in items\">\r\n                    <td>{{ item.name }}</td>\r\n                    <td>{{ item.price }}</td>\r\n                    <td>{{ item.amount }}</td>\r\n                    <td class=\"actions-column product-actions-column\">\r\n                        <button class=\"btn btn-default\" v-on:click=\"deleteUsingJSConfirm(item)\">Delete Using JS Confirm</button>\r\n                        <button class=\"btn btn-default\" v-on:click=\"deleteUsingBSModal(item)\">Delete Using BS Modal</button>\r\n                        <button class=\"btn btn-default\" v-on:click=\"deleteUsingJQueryConfirm(item)\">Delete Using jquery-confirm</button>\r\n                    </td>\r\n                </tr>\r\n            </tbody>\r\n        </table>\r\n    </div>\r\n</div>\r\n<div class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" v-show-modal=\"isBSDeletion\" data-backdrop=\"static\" data-keyboard=\"false\">\r\n    <div class=\"modal-dialog modal-sm1\" role=\"document\">\r\n        <div class=\"modal-content\">\r\n            <div class=\"modal-header\">\r\n                <button type=\"button\" class=\"close\" v-on:click=\"cancelBSDeletion\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>\r\n                <h4 class=\"modal-title\">Confirmation</h4>\r\n            </div>\r\n            <div class=\"modal-body\">\r\n                Are you sure you want to delete \"<strong>{{ bsDeletionItem ? bsDeletionItem.name : null }}</strong>\" product?\r\n            </div>\r\n            <div class=\"modal-footer\">\r\n                <button type=\"button\" class=\"btn btn-primary\" v-on:click=\"confirmBSDeletion\">Delete</button>\r\n                <button type=\"button\" class=\"btn btn-default\" v-on:click=\"cancelBSDeletion\">Cancel</button>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	module.exports = {
-	    template: __webpack_require__(28),
+	    template: __webpack_require__(29),
 	    route: {
 	        activate: function activate() {
 	            this.$root.title = 'Settings';
@@ -17785,25 +17829,25 @@
 	};
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports) {
 
 	module.exports = "<div class=\"col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1\">\r\n    <div class=\"page-header\">\r\n        <h1 class=\"text-center\">{{ $root.title }}</h1>\r\n    </div>\r\n    <p>\r\n        <strong>Should contain some settings</strong>\r\n    </p>\r\n</div>\r\n";
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _validatorRules = __webpack_require__(30);
+	var _validatorRules = __webpack_require__(31);
 
 	var _validatorRules2 = _interopRequireDefault(_validatorRules);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
-	    template: __webpack_require__(31),
+	    template: __webpack_require__(32),
 	    data: function data() {
 	        return {
 	            email: null,
@@ -17837,7 +17881,7 @@
 	};
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -17880,18 +17924,18 @@
 	};
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports) {
 
 	module.exports = "<div class=\"col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3\">\r\n    <div class=\"page-header\">\r\n        <h1 class=\"text-center\">{{ $root.title }}</h1>\r\n    </div>\r\n    <validator name=\"validation\">\r\n        <div>\r\n            <div class=\"form-group\" v-bind:class=\"{ 'has-error': $validation.email.invalid }\">\r\n                <label for=\"email\">Email</label>\r\n                <span class=\"help-block\" v-if=\"$validation.email.invalid\">\r\n                    {{ $validation.email.errors[0].message }}\r\n                </span>\r\n                <input type=\"text\" id=\"email\" v-model=\"email\" class=\"form-control\"\r\n                       detect-change=\"off\" v-validate:email=\"rules.email\" />\r\n            </div>\r\n            <div class=\"form-group\" v-bind:class=\"{ 'has-error': $validation.password.invalid }\">\r\n                <label for=\"password\">Password</label>\r\n                <span class=\"help-block\" v-if=\"$validation.password.invalid\">\r\n                    {{ $validation.password.errors[0].message }}\r\n                </span>\r\n                <input type=\"password\" id=\"password\" v-model=\"password\" class=\"form-control\"\r\n                       detect-change=\"off\" v-validate:password=\"rules.password\" />\r\n            </div>\r\n            <input type=\"submit\" value=\"Sign In\" v-on:click=\"signIn\" class=\"btn btn-primary\" />\r\n            <br />\r\n            <br />\r\n            <p class=\"text-muted\">Use <b>admin@mail.com</b>/<b>abc123</b> credentials</p>\r\n        </div>\r\n    </validator>\r\n</div>\r\n";
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _validatorRules = __webpack_require__(30);
+	var _validatorRules = __webpack_require__(31);
 
 	var _validatorRules2 = _interopRequireDefault(_validatorRules);
 
@@ -17906,7 +17950,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
-	    template: __webpack_require__(33),
+	    template: __webpack_require__(34),
 	    validators: {
 	        uniqueEmail: {
 	            message: 'is already used by another user',
@@ -17969,13 +18013,13 @@
 	};
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports) {
 
 	module.exports = "<div class=\"col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3\">\r\n    <div class=\"page-header\">\r\n        <h1 class=\"text-center\">{{ $root.title }}</h1>\r\n    </div>\r\n    <validator name=\"validation\">\r\n        <div>\r\n            <div class=\"form-group\" v-bind:class=\"{ 'has-error': $validation.firstName.invalid }\">\r\n                <label for=\"first-name\">First Name</label>\r\n                <span class=\"help-block\" v-if=\"$validation.firstName.invalid\">\r\n                    {{ $validation.firstName.errors[0].message }}\r\n                </span>\r\n                <input type=\"text\" id=\"first-name\" v-model=\"firstName\" class=\"form-control\"\r\n                       detect-change=\"off\" v-validate:first-name=\"rules.firstName\" />\r\n            </div>\r\n            <div class=\"form-group\" v-bind:class=\"{ 'has-error': $validation.lastName.invalid }\">\r\n                <label for=\"last-name\">Last Name</label>\r\n                <span class=\"help-block\" v-if=\"$validation.lastName.invalid\">\r\n                    {{ $validation.lastName.errors[0].message }}\r\n                </span>\r\n                <input type=\"text\" id=\"last-name\" v-model=\"lastName\" class=\"form-control\"\r\n                       detect-change=\"off\" v-validate:last-name=\"rules.lastName\" />\r\n            </div>\r\n            <div class=\"form-group\" v-bind:class=\"{ 'has-error': $validation.email.invalid }\">\r\n                <label for=\"email\">Email</label>\r\n                <span class=\"help-block\" v-if=\"$validation.email.invalid\">\r\n                    {{ $validation.email.errors[0].message }}\r\n                </span>\r\n                <input type=\"text\" id=\"email\" v-model=\"email\" class=\"form-control\"\r\n                       detect-change=\"off\" v-validate:email=\"rules.email\" />\r\n            </div>\r\n            <div class=\"form-group\" v-bind:class=\"{ 'has-error': $validation.password.invalid }\">\r\n                <label for=\"password\">Password</label>\r\n                <span class=\"help-block\" v-if=\"$validation.password.invalid\">\r\n                    {{ $validation.password.errors[0].message }}\r\n                </span>\r\n                <input type=\"password\" id=\"password\" v-model=\"password\" class=\"form-control\"\r\n                       detect-change=\"off\" v-validate:password=\"rules.password\" autocomplete=\"off\" />\r\n            </div>\r\n            <!--<div class=\"form-group\" v-bind:class=\"{ 'has-error': $validation.office.invalid }\">\r\n                <label for=\"office\">Office</label>\r\n                <span class=\"help-block\" v-if=\"$validation.office.invalid\">\r\n                    {{ $validation.office.errors[0].message }}\r\n                </span>\r\n                <select id=\"office\" v-model=\"office\" class=\"form-control\"\r\n                        detect-change=\"off\" v-validate:office=\"rules.office\">\r\n                    <option value=\"Berlin\">Berlin</option>\r\n                    <option value=\"London\">London</option>\r\n                    <option value=\"New York\">New York</option>\r\n                    <option value=\"Paris\">Paris</option>\r\n                    <option value=\"Rome\">Rome</option>\r\n                    <option value=\"Tokio\">Tokio</option>\r\n                    <option value=\"Washington\">Washington</option>\r\n                </select>\r\n            </div>\r\n            <div class=\"form-group\" v-bind:class=\"{ 'has-error': $validation.gender.invalid }\">\r\n                <label>Gender</label>\r\n                <span class=\"help-block\" v-if=\"$validation.gender.invalid\">\r\n                    {{ $validation.gender.errors[0].message }}\r\n                </span>\r\n                <input type=\"hidden\" v-model=\"gender\" v-validate:gender=\"rules.gender\">\r\n                <br>\r\n                <label class=\"label-option\">\r\n                    <input type=\"radio\" name=\"gender\" value=\"Male\" v-model=\"gender\">\r\n                    Male\r\n                </label>\r\n                <label class=\"label-option\">\r\n                    <input type=\"radio\" name=\"gender\" value=\"Female\" v-model=\"gender\">\r\n                    Female\r\n                </label>\r\n            </div>-->\r\n            <div class=\"form-group\" v-bind:class=\"{ 'has-error': $validation.agreement.invalid }\">\r\n                <div class=\"checkbox\">\r\n                    <label>\r\n                        <input type=\"checkbox\" v-model=\"agreement\" v-validate:agreement=\"rules.agreement\">\r\n                        I agree to terms of service and privacy policy\r\n                    </label>\r\n                    <span class=\"help-block\" v-if=\"$validation.agreement.invalid\">\r\n                        {{ $validation.agreement.errors[0].message }}\r\n                    </span>\r\n                </div>\r\n            </div>\r\n            <input type=\"submit\" value=\"Sign Up\" v-on:click=\"signUp\" class=\"btn btn-primary\" />\r\n        </div>\r\n    </validator>\r\n</div>\r\n";
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17987,7 +18031,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
-	    template: __webpack_require__(35),
+	    template: __webpack_require__(36),
 	    data: function data() {
 	        return {
 	            summary: null
@@ -18009,18 +18053,18 @@
 	};
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports) {
 
 	module.exports = "<div class=\"col-md-8 col-md-offset-2 col-sm-12\">\r\n    <div class=\"page-header\">\r\n        <h1 class=\"text-center\">{{ $root.title }}</h1>\r\n    </div>\r\n    <div v-if=\"summary\" class=\"summary-container\">\r\n        <div class=\"row details-list\">\r\n            <dl class=\"col-sm-6\">\r\n                <dt>Email</dt>\r\n                <dd>{{ summary.email }}</dd>\r\n            </dl>\r\n            <dl class=\"col-sm-6\" v-if=\"summary.office\">\r\n                <dt>Office</dt>\r\n                <dd>{{ summary.office }}</dd>\r\n            </dl>\r\n            <dl class=\"col-sm-6\" v-if=\"summary.gender\">\r\n                <dt>Gender</dt>\r\n                <dd>{{ summary.gender }}</dd>\r\n            </dl>\r\n            <dl class=\"col-sm-6\" v-if=\"summary.birthday\">\r\n                <dt>Birthday</dt>\r\n                <dd>{{ summary.birthday }}</dd>\r\n            </dl>\r\n            <dl class=\"col-sm-6\" v-if=\"summary.notes\">\r\n                <dt>Notes</dt>\r\n                <dd>{{ summary.notes }}</dd>\r\n            </dl>\r\n        </div>\r\n    </div>\r\n</div>";
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _validatorRules = __webpack_require__(30);
+	var _validatorRules = __webpack_require__(31);
 
 	var _validatorRules2 = _interopRequireDefault(_validatorRules);
 
@@ -18035,7 +18079,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
-	    template: __webpack_require__(37),
+	    template: __webpack_require__(38),
 	    validators: {
 	        uniqueEmail: {
 	            message: 'is already used by another user',
@@ -18126,19 +18170,19 @@
 	};
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports) {
 
 	module.exports = "<div class=\"col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0\">\r\n    <div class=\"page-header\">\r\n        <h1 class=\"text-center\">{{ $root.title }}</h1>\r\n    </div>\r\n    <button v-on:click=\"new\" class=\"btn btn-default\">New</button>\r\n    <div class=\"table-responsive\">\r\n        <table class=\"table table-hover\">\r\n            <thead>\r\n                <tr>\r\n                    <th>First Name</th>\r\n                    <th>Last Name</th>\r\n                    <th>Email</th>\r\n                    <th>Office</th>\r\n                    <th></th>\r\n                </tr>\r\n            </thead>\r\n            <tbody>\r\n                <tr v-for=\"item in items\">\r\n                    <td>{{ item.firstName }}</td>\r\n                    <td>{{ item.lastName }}</td>\r\n                    <td>{{ item.email }}</td>\r\n                    <td>{{ item.office }}</td>\r\n                    <td class=\"actions-column user-actions-column\">\r\n                        <div class=\"btn-group btn-group-sm\" role=\"group\">\r\n                            <a role=\"button\" class=\"btn btn-default\" v-link=\"'/users/' + item.id\">View</a>\r\n                            <button class=\"btn btn-default\" v-on:click=\"edit(item)\">Edit</button>\r\n                            <button class=\"btn btn-default\" v-on:click=\"remove(item)\">Delete</button>\r\n                        </div>\r\n                    </td>\r\n                </tr>\r\n            </tbody>\r\n        </table>\r\n    </div>\r\n</div>\r\n<div class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" v-show-modal=\"isEditing\" data-backdrop=\"static\" data-keyboard=\"false\">\r\n    <div class=\"modal-dialog\" role=\"document\">\r\n        <div class=\"modal-content\">\r\n            <div class=\"modal-header\">\r\n                <button type=\"button\" class=\"close\" v-on:click=\"cancelEditing\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>\r\n                <h4 class=\"modal-title\">{{ editItem.title }}</h4>\r\n            </div>\r\n            <div class=\"modal-body\" style=\"height: 432px\">\r\n                <validator name=\"validation\">\r\n                    <form novalidate v-if=\"editItem.data\">\r\n                        <ul class=\"nav nav-tabs\" role=\"tablist\">\r\n                            <li role=\"presentation\" class=\"active\">\r\n                                <a href=\"#general\" aria-controls=\"home\" role=\"tab\" data-toggle=\"tab\">\r\n                                    General\r\n                                    <span class=\"glyphicon glyphicon-exclamation-sign text-danger\" aria-hidden=\"true\"\r\n                                          v-if=\"$validation.firstName.invalid || $validation.lastName.invalid || $validation.email.invalid || $validation.office.invalid || $validation.gender.invalid\"></span>\r\n                                </a>\r\n                            </li>\r\n                            <li role=\"presentation\">\r\n                                <a href=\"#additional\" aria-controls=\"home\" role=\"tab\" data-toggle=\"tab\">\r\n                                    Additional\r\n                                    <span class=\"glyphicon glyphicon-exclamation-sign text-danger\" aria-hidden=\"true\"\r\n                                          v-if=\"$validation.birthday.invalid || $validation.notes.invalid\"></span>\r\n                                </a>\r\n                            </li>\r\n                        </ul>\r\n                        <div class=\"tab-content\">\r\n                            <div role=\"tabpanel\" class=\"tab-pane active\" id=\"general\">\r\n                                <div class=\"form-group\" v-bind:class=\"{ 'has-error': $validation.firstName.invalid }\">\r\n                                    <label for=\"first-name\">First Name</label>\r\n                                    <span class=\"help-block\" v-if=\"$validation.firstName.invalid\">\r\n                                        {{ $validation.firstName.errors[0].message }}\r\n                                    </span>\r\n                                    <input type=\"text\" id=\"first-name\" v-model=\"editItem.data.firstName\" class=\"form-control\"\r\n                                           detect-change=\"off\" v-validate:first-name=\"editItem.rules.firstName\" />\r\n                                </div>\r\n                                <div class=\"form-group\" v-bind:class=\"{ 'has-error': $validation.lastName.invalid }\">\r\n                                    <label for=\"last-name\">Last Name</label>\r\n                                    <span class=\"help-block\" v-if=\"$validation.lastName.invalid\">\r\n                                        {{ $validation.lastName.errors[0].message }}\r\n                                    </span>\r\n                                    <input type=\"text\" id=\"last-name\" v-model=\"editItem.data.lastName\" class=\"form-control\"\r\n                                           detect-change=\"off\" v-validate:last-name=\"editItem.rules.lastName\" />\r\n                                </div>\r\n                                <div class=\"form-group\" v-bind:class=\"{ 'has-error': $validation.email.invalid }\">\r\n                                    <label for=\"email\">Email</label>\r\n                                    <span class=\"help-block\" v-if=\"$validation.email.invalid\">\r\n                                        {{ $validation.email.errors[0].message }}\r\n                                    </span>\r\n                                    <input type=\"text\" id=\"email\" v-model=\"editItem.data.email\" v-bind:readonly=\"!editItem.isNew\" class=\"form-control\"\r\n                                           detect-change=\"off\" v-validate:email=\"editItem.rules.email\" />\r\n                                </div>\r\n                                <div class=\"form-group\" v-bind:class=\"{ 'has-error': $validation.office.invalid }\">\r\n                                    <label for=\"office\">Office</label>\r\n                                    <span class=\"help-block\" v-if=\"$validation.office.invalid\">\r\n                                        {{ $validation.office.errors[0].message }}\r\n                                    </span>\r\n                                    <select id=\"office\" v-model=\"editItem.data.office\" class=\"form-control\"\r\n                                            detect-change=\"off\" v-validate:office=\"editItem.rules.office\">\r\n                                        <option value=\"Berlin\">Berlin</option>\r\n                                        <option value=\"London\">London</option>\r\n                                        <option value=\"New York\">New York</option>\r\n                                        <option value=\"Paris\">Paris</option>\r\n                                        <option value=\"Rome\">Rome</option>\r\n                                        <option value=\"Tokio\">Tokio</option>\r\n                                        <option value=\"Washington\">Washington</option>\r\n                                    </select>\r\n                                </div>\r\n                                <div class=\"form-group\" v-bind:class=\"{ 'has-error': $validation.gender.invalid }\">\r\n                                    <label>Gender</label>\r\n                                    <span class=\"help-block\" v-if=\"$validation.gender.invalid\">\r\n                                        {{ $validation.gender.errors[0].message }}\r\n                                    </span>\r\n                                    <input type=\"hidden\" v-model=\"editItem.data.gender\" v-validate:gender=\"editItem.rules.gender\">\r\n                                    <br>\r\n                                    <label class=\"label-option\">\r\n                                        <input type=\"radio\" name=\"gender\" value=\"Male\" v-model=\"editItem.data.gender\">\r\n                                        Male\r\n                                    </label>\r\n                                    <label class=\"label-option\">\r\n                                        <input type=\"radio\" name=\"gender\" value=\"Female\" v-model=\"editItem.data.gender\">\r\n                                        Female\r\n                                    </label>\r\n                                </div>\r\n                            </div>\r\n                            <div role=\"tabpanel\" class=\"tab-pane\" id=\"additional\">\r\n                                <div class=\"form-group\" v-bind:class=\"{ 'has-error': $validation.birthday.invalid }\">\r\n                                    <label for=\"birthday\">Birthday</label>\r\n                                    <span class=\"help-block\" v-if=\"$validation.birthday.invalid\">\r\n                                        {{ $validation.birthday.errors[0].message }}\r\n                                    </span>\r\n                                    <div class=\"input-group date\" v-date-picker=\"true\">\r\n                                        <input type=\"text\" id=\"birthday\" v-model=\"editItem.data.birthday\" class=\"form-control\"\r\n                                               v-validate:birthday=\"editItem.rules.birthday\" />\r\n                                        <span class=\"input-group-addon\"><i class=\"glyphicon glyphicon-calendar\"></i></span>\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"form-group\" v-bind:class=\"{ 'has-error': $validation.notes.invalid }\">\r\n                                    <label for=\"notes\">Notes</label>\r\n                                    <span class=\"help-block\" v-if=\"$validation.notes.invalid\">\r\n                                        {{ $validation.notes.errors[0].message }}\r\n                                    </span>\r\n                                    <textarea id=\"notes\" v-model=\"editItem.data.notes\" class=\"form-control\"\r\n                                              detect-change=\"off\" v-validate:notes=\"editItem.rules.notes\"></textarea>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                    </form>\r\n                </validator>\r\n            </div>\r\n            <div class=\"modal-footer\">\r\n                <button type=\"button\" class=\"btn btn-primary\" v-if=\"editItem.isNew\" v-on:click=\"create\">Create</button>\r\n                <button type=\"button\" class=\"btn btn-primary\" v-if=\"!editItem.isNew\" v-on:click=\"update\">Save</button>\r\n                <button type=\"button\" class=\"btn btn-default\" v-on:click=\"cancelEditing\">Cancel</button>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18162,7 +18206,7 @@
 	});
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18183,7 +18227,7 @@
 	});
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -28553,12 +28597,6 @@
 
 
 /***/ }),
-/* 42 */
-/***/ (function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ }),
 /* 43 */
 /***/ (function(module, exports) {
 
@@ -28572,6 +28610,12 @@
 
 /***/ }),
 /* 45 */
+/***/ (function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -28582,7 +28626,7 @@
 
 	(function(factory){
 	    if (true) {
-	        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(41)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(42)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 	    } else if (typeof exports === 'object') {
 	        factory(require('jquery'));
 	    } else {
@@ -30607,7 +30651,7 @@
 
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports) {
 
 	/*!
@@ -32990,7 +33034,7 @@
 
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports) {
 
 	/*!
@@ -33005,7 +33049,7 @@
 	if(typeof jQuery==="undefined"){throw new Error("jquery-confirm requires jQuery");}var jconfirm,Jconfirm;(function($,window){$.fn.confirm=function(options,option2){if(typeof options==="undefined"){options={};}if(typeof options==="string"){options={content:options,title:(option2)?option2:false};}$(this).each(function(){var $this=$(this);if($this.attr("jc-attached")){console.warn("jConfirm has already been attached to this element ",$this[0]);return;}$this.on("click",function(e){e.preventDefault();var jcOption=$.extend({},options);if($this.attr("data-title")){jcOption.title=$this.attr("data-title");}if($this.attr("data-content")){jcOption.content=$this.attr("data-content");}if(typeof jcOption.buttons=="undefined"){jcOption.buttons={};}jcOption["$target"]=$this;if($this.attr("href")&&Object.keys(jcOption.buttons).length==0){var buttons=$.extend(true,{},jconfirm.pluginDefaults.defaultButtons,(jconfirm.defaults||{}).defaultButtons||{});var firstBtn=Object.keys(buttons)[0];jcOption.buttons=buttons;jcOption.buttons[firstBtn].action=function(){location.href=$this.attr("href");};}jcOption.closeIcon=false;var instance=$.confirm(jcOption);});$this.attr("jc-attached",true);});return $(this);};$.confirm=function(options,option2){if(typeof options==="undefined"){options={};}if(typeof options==="string"){options={content:options,title:(option2)?option2:false};}var putDefaultButtons=!(options.buttons==false);if(typeof options.buttons!="object"){options.buttons={};}if(Object.keys(options.buttons).length==0&&putDefaultButtons){var buttons=$.extend(true,{},jconfirm.pluginDefaults.defaultButtons,(jconfirm.defaults||{}).defaultButtons||{});options.buttons=buttons;}return jconfirm(options);};$.alert=function(options,option2){if(typeof options==="undefined"){options={};}if(typeof options==="string"){options={content:options,title:(option2)?option2:false};}var putDefaultButtons=!(options.buttons==false);if(typeof options.buttons!="object"){options.buttons={};}if(Object.keys(options.buttons).length==0&&putDefaultButtons){var buttons=$.extend(true,{},jconfirm.pluginDefaults.defaultButtons,(jconfirm.defaults||{}).defaultButtons||{});var firstBtn=Object.keys(buttons)[0];options.buttons[firstBtn]=buttons[firstBtn];}return jconfirm(options);};$.dialog=function(options,option2){if(typeof options==="undefined"){options={};}if(typeof options==="string"){options={content:options,title:(option2)?option2:false,closeIcon:function(){}};}options.buttons={};if(typeof options.closeIcon=="undefined"){options.closeIcon=function(){};}options.confirmKeys=[13];return jconfirm(options);};jconfirm=function(options){if(typeof options==="undefined"){options={};}var pluginOptions=$.extend(true,{},jconfirm.pluginDefaults);if(jconfirm.defaults){pluginOptions=$.extend(true,pluginOptions,jconfirm.defaults);}pluginOptions=$.extend(true,{},pluginOptions,options);var instance=new Jconfirm(pluginOptions);jconfirm.instances.push(instance);return instance;};Jconfirm=function(options){$.extend(this,options);this._init();};Jconfirm.prototype={_init:function(){var that=this;if(!jconfirm.instances.length){jconfirm.lastFocused=$("body").find(":focus");}this._id=Math.round(Math.random()*99999);this.contentParsed=$(document.createElement("div"));if(!this.lazyOpen){setTimeout(function(){that.open();},0);}},_buildHTML:function(){var that=this;this._parseAnimation(this.animation,"o");this._parseAnimation(this.closeAnimation,"c");this._parseBgDismissAnimation(this.backgroundDismissAnimation);this._parseColumnClass(this.columnClass);this._parseTheme(this.theme);this._parseType(this.type);var template=$(this.template);template.find(".jconfirm-box").addClass(this.animationParsed).addClass(this.backgroundDismissAnimationParsed).addClass(this.typeParsed);if(this.typeAnimated){template.find(".jconfirm-box").addClass("jconfirm-type-animated");}if(this.useBootstrap){template.find(".jc-bs3-row").addClass(this.bootstrapClasses.row);template.find(".jc-bs3-row").addClass("justify-content-md-center justify-content-sm-center justify-content-xs-center justify-content-lg-center");template.find(".jconfirm-box-container").addClass(this.columnClassParsed);if(this.containerFluid){template.find(".jc-bs3-container").addClass(this.bootstrapClasses.containerFluid);}else{template.find(".jc-bs3-container").addClass(this.bootstrapClasses.container);}}else{template.find(".jconfirm-box").css("width",this.boxWidth);}if(this.titleClass){template.find(".jconfirm-title-c").addClass(this.titleClass);}template.addClass(this.themeParsed);var ariaLabel="jconfirm-box"+this._id;template.find(".jconfirm-box").attr("aria-labelledby",ariaLabel).attr("tabindex",-1);template.find(".jconfirm-content").attr("id",ariaLabel);if(this.bgOpacity!==null){template.find(".jconfirm-bg").css("opacity",this.bgOpacity);}if(this.rtl){template.addClass("jconfirm-rtl");}this.$el=template.appendTo(this.container);this.$jconfirmBoxContainer=this.$el.find(".jconfirm-box-container");this.$jconfirmBox=this.$body=this.$el.find(".jconfirm-box");this.$jconfirmBg=this.$el.find(".jconfirm-bg");this.$title=this.$el.find(".jconfirm-title");this.$titleContainer=this.$el.find(".jconfirm-title-c");this.$content=this.$el.find("div.jconfirm-content");this.$contentPane=this.$el.find(".jconfirm-content-pane");this.$icon=this.$el.find(".jconfirm-icon-c");this.$closeIcon=this.$el.find(".jconfirm-closeIcon");this.$holder=this.$el.find(".jconfirm-holder");this.$btnc=this.$el.find(".jconfirm-buttons");this.$scrollPane=this.$el.find(".jconfirm-scrollpane");that.setStartingPoint();this._contentReady=$.Deferred();this._modalReady=$.Deferred();this.$holder.css({"padding-top":this.offsetTop,"padding-bottom":this.offsetBottom,});this.setTitle();this.setIcon();this._setButtons();this._parseContent();this.initDraggable();if(this.isAjax){this.showLoading(false);}$.when(this._contentReady,this._modalReady).then(function(){if(that.isAjaxLoading){setTimeout(function(){that.isAjaxLoading=false;that.setContent();that.setTitle();that.setIcon();setTimeout(function(){that.hideLoading(false);that._updateContentMaxHeight();},100);if(typeof that.onContentReady==="function"){that.onContentReady();}},50);}else{that._updateContentMaxHeight();that.setTitle();that.setIcon();if(typeof that.onContentReady==="function"){that.onContentReady();}}if(that.autoClose){that._startCountDown();}});this._watchContent();if(this.animation==="none"){this.animationSpeed=1;this.animationBounce=1;}this.$body.css(this._getCSS(this.animationSpeed,this.animationBounce));this.$contentPane.css(this._getCSS(this.animationSpeed,1));this.$jconfirmBg.css(this._getCSS(this.animationSpeed,1));this.$jconfirmBoxContainer.css(this._getCSS(this.animationSpeed,1));},_typePrefix:"jconfirm-type-",typeParsed:"",_parseType:function(type){this.typeParsed=this._typePrefix+type;},setType:function(type){var oldClass=this.typeParsed;this._parseType(type);this.$jconfirmBox.removeClass(oldClass).addClass(this.typeParsed);},themeParsed:"",_themePrefix:"jconfirm-",setTheme:function(theme){var previous=this.theme;this.theme=theme||this.theme;this._parseTheme(this.theme);if(previous){this.$el.removeClass(previous);}this.$el.addClass(this.themeParsed);this.theme=theme;},_parseTheme:function(theme){var that=this;theme=theme.split(",");$.each(theme,function(k,a){if(a.indexOf(that._themePrefix)===-1){theme[k]=that._themePrefix+$.trim(a);}});this.themeParsed=theme.join(" ").toLowerCase();},backgroundDismissAnimationParsed:"",_bgDismissPrefix:"jconfirm-hilight-",_parseBgDismissAnimation:function(bgDismissAnimation){var animation=bgDismissAnimation.split(",");var that=this;$.each(animation,function(k,a){if(a.indexOf(that._bgDismissPrefix)===-1){animation[k]=that._bgDismissPrefix+$.trim(a);}});this.backgroundDismissAnimationParsed=animation.join(" ").toLowerCase();},animationParsed:"",closeAnimationParsed:"",_animationPrefix:"jconfirm-animation-",setAnimation:function(animation){this.animation=animation||this.animation;this._parseAnimation(this.animation,"o");},_parseAnimation:function(animation,which){which=which||"o";var animations=animation.split(",");var that=this;$.each(animations,function(k,a){if(a.indexOf(that._animationPrefix)===-1){animations[k]=that._animationPrefix+$.trim(a);}});var a_string=animations.join(" ").toLowerCase();if(which==="o"){this.animationParsed=a_string;}else{this.closeAnimationParsed=a_string;}return a_string;},setCloseAnimation:function(closeAnimation){this.closeAnimation=closeAnimation||this.closeAnimation;this._parseAnimation(this.closeAnimation,"c");},setAnimationSpeed:function(speed){this.animationSpeed=speed||this.animationSpeed;},columnClassParsed:"",setColumnClass:function(colClass){if(!this.useBootstrap){console.warn("cannot set columnClass, useBootstrap is set to false");return;}this.columnClass=colClass||this.columnClass;this._parseColumnClass(this.columnClass);this.$jconfirmBoxContainer.addClass(this.columnClassParsed);},_updateContentMaxHeight:function(){var height=$(window).height()-(this.$jconfirmBox.outerHeight()-this.$contentPane.outerHeight())-(this.offsetTop+this.offsetBottom);this.$contentPane.css({"max-height":height+"px"});},setBoxWidth:function(width){if(this.useBootstrap){console.warn("cannot set boxWidth, useBootstrap is set to true");return;}this.boxWidth=width;this.$jconfirmBox.css("width",width);},_parseColumnClass:function(colClass){colClass=colClass.toLowerCase();var p;switch(colClass){case"xl":case"xlarge":p="col-md-12";break;case"l":case"large":p="col-md-8 col-md-offset-2";break;case"m":case"medium":p="col-md-6 col-md-offset-3";break;case"s":case"small":p="col-md-4 col-md-offset-4";break;case"xs":case"xsmall":p="col-md-2 col-md-offset-5";break;default:p=colClass;}this.columnClassParsed=p;},initDraggable:function(){var that=this;var $t=this.$titleContainer;this.resetDrag();if(this.draggable){$t.on("mousedown",function(e){$t.addClass("jconfirm-hand");that.mouseX=e.clientX;that.mouseY=e.clientY;that.isDrag=true;});$(window).on("mousemove."+this._id,function(e){if(that.isDrag){that.movingX=e.clientX-that.mouseX+that.initialX;that.movingY=e.clientY-that.mouseY+that.initialY;that.setDrag();}});$(window).on("mouseup."+this._id,function(){$t.removeClass("jconfirm-hand");if(that.isDrag){that.isDrag=false;that.initialX=that.movingX;that.initialY=that.movingY;}});}},resetDrag:function(){this.isDrag=false;this.initialX=0;this.initialY=0;this.movingX=0;this.movingY=0;this.mouseX=0;this.mouseY=0;this.$jconfirmBoxContainer.css("transform","translate("+0+"px, "+0+"px)");},setDrag:function(){if(!this.draggable){return;}this.alignMiddle=false;var boxWidth=this.$jconfirmBox.outerWidth();var boxHeight=this.$jconfirmBox.outerHeight();var windowWidth=$(window).width();var windowHeight=$(window).height();var that=this;var dragUpdate=1;if(that.movingX%dragUpdate===0||that.movingY%dragUpdate===0){if(that.dragWindowBorder){var leftDistance=(windowWidth/2)-boxWidth/2;var topDistance=(windowHeight/2)-boxHeight/2;topDistance-=that.dragWindowGap;leftDistance-=that.dragWindowGap;if(leftDistance+that.movingX<0){that.movingX=-leftDistance;}else{if(leftDistance-that.movingX<0){that.movingX=leftDistance;}}if(topDistance+that.movingY<0){that.movingY=-topDistance;}else{if(topDistance-that.movingY<0){that.movingY=topDistance;}}}that.$jconfirmBoxContainer.css("transform","translate("+that.movingX+"px, "+that.movingY+"px)");}},_scrollTop:function(){if(typeof pageYOffset!=="undefined"){return pageYOffset;}else{var B=document.body;var D=document.documentElement;D=(D.clientHeight)?D:B;return D.scrollTop;}},_watchContent:function(){var that=this;if(this._timer){clearInterval(this._timer);}var prevContentHeight=0;this._timer=setInterval(function(){if(that.smoothContent){var contentHeight=that.$content.outerHeight()||0;if(contentHeight!==prevContentHeight){that.$contentPane.css({height:contentHeight}).scrollTop(0);prevContentHeight=contentHeight;}var wh=$(window).height();var total=that.offsetTop+that.offsetBottom+that.$jconfirmBox.height()-that.$contentPane.height()+that.$content.height();if(total<wh){that.$contentPane.addClass("no-scroll");}else{that.$contentPane.removeClass("no-scroll");}}},this.watchInterval);},_overflowClass:"jconfirm-overflow",_hilightAnimating:false,highlight:function(){this.hiLightModal();},hiLightModal:function(){var that=this;if(this._hilightAnimating){return;}that.$body.addClass("hilight");var duration=parseFloat(that.$body.css("animation-duration"))||2;this._hilightAnimating=true;setTimeout(function(){that._hilightAnimating=false;that.$body.removeClass("hilight");},duration*1000);},_bindEvents:function(){var that=this;this.boxClicked=false;this.$scrollPane.click(function(e){if(!that.boxClicked){var buttonName=false;var shouldClose=false;var str;if(typeof that.backgroundDismiss=="function"){str=that.backgroundDismiss();}else{str=that.backgroundDismiss;}if(typeof str=="string"&&typeof that.buttons[str]!="undefined"){buttonName=str;shouldClose=false;}else{if(typeof str=="undefined"||!!(str)==true){shouldClose=true;}else{shouldClose=false;}}if(buttonName){var btnResponse=that.buttons[buttonName].action.apply(that);shouldClose=(typeof btnResponse=="undefined")||!!(btnResponse);}if(shouldClose){that.close();}else{that.hiLightModal();}}that.boxClicked=false;});this.$jconfirmBox.click(function(e){that.boxClicked=true;});var isKeyDown=false;$(window).on("jcKeyDown."+that._id,function(e){if(!isKeyDown){isKeyDown=true;}});$(window).on("keyup."+that._id,function(e){if(isKeyDown){that.reactOnKey(e);isKeyDown=false;}});$(window).on("resize."+this._id,function(){that._updateContentMaxHeight();setTimeout(function(){that.resetDrag();},100);});},_cubic_bezier:"0.36, 0.55, 0.19",_getCSS:function(speed,bounce){return{"-webkit-transition-duration":speed/1000+"s","transition-duration":speed/1000+"s","-webkit-transition-timing-function":"cubic-bezier("+this._cubic_bezier+", "+bounce+")","transition-timing-function":"cubic-bezier("+this._cubic_bezier+", "+bounce+")"};},_setButtons:function(){var that=this;var total_buttons=0;if(typeof this.buttons!=="object"){this.buttons={};}$.each(this.buttons,function(key,button){total_buttons+=1;if(typeof button==="function"){that.buttons[key]=button={action:button};}that.buttons[key].text=button.text||key;that.buttons[key].btnClass=button.btnClass||"btn-default";that.buttons[key].action=button.action||function(){};that.buttons[key].keys=button.keys||[];that.buttons[key].isHidden=button.isHidden||false;that.buttons[key].isDisabled=button.isDisabled||false;$.each(that.buttons[key].keys,function(i,a){that.buttons[key].keys[i]=a.toLowerCase();});var button_element=$('<button type="button" class="btn"></button>').html(that.buttons[key].text).addClass(that.buttons[key].btnClass).prop("disabled",that.buttons[key].isDisabled).css("display",that.buttons[key].isHidden?"none":"").click(function(e){e.preventDefault();var res=that.buttons[key].action.apply(that,[that.buttons[key]]);that.onAction.apply(that,[key,that.buttons[key]]);that._stopCountDown();if(typeof res==="undefined"||res){that.close();}});that.buttons[key].el=button_element;that.buttons[key].setText=function(text){button_element.html(text);};that.buttons[key].addClass=function(className){button_element.addClass(className);};that.buttons[key].removeClass=function(className){button_element.removeClass(className);};that.buttons[key].disable=function(){that.buttons[key].isDisabled=true;button_element.prop("disabled",true);};that.buttons[key].enable=function(){that.buttons[key].isDisabled=false;button_element.prop("disabled",false);};that.buttons[key].show=function(){that.buttons[key].isHidden=false;button_element.css("display","");};that.buttons[key].hide=function(){that.buttons[key].isHidden=true;button_element.css("display","none");};that["$_"+key]=that["$$"+key]=button_element;that.$btnc.append(button_element);});if(total_buttons===0){this.$btnc.hide();}if(this.closeIcon===null&&total_buttons===0){this.closeIcon=true;}if(this.closeIcon){if(this.closeIconClass){var closeHtml='<i class="'+this.closeIconClass+'"></i>';this.$closeIcon.html(closeHtml);}this.$closeIcon.click(function(e){e.preventDefault();var buttonName=false;var shouldClose=false;var str;if(typeof that.closeIcon=="function"){str=that.closeIcon();}else{str=that.closeIcon;}if(typeof str=="string"&&typeof that.buttons[str]!="undefined"){buttonName=str;shouldClose=false;}else{if(typeof str=="undefined"||!!(str)==true){shouldClose=true;}else{shouldClose=false;}}if(buttonName){var btnResponse=that.buttons[buttonName].action.apply(that);shouldClose=(typeof btnResponse=="undefined")||!!(btnResponse);}if(shouldClose){that.close();}});this.$closeIcon.show();}else{this.$closeIcon.hide();}},setTitle:function(string,force){force=force||false;if(typeof string!=="undefined"){if(typeof string=="string"){this.title=string;}else{if(typeof string=="function"){if(typeof string.promise=="function"){console.error("Promise was returned from title function, this is not supported.");}var response=string();if(typeof response=="string"){this.title=response;}else{this.title=false;}}else{this.title=false;}}}if(this.isAjaxLoading&&!force){return;}this.$title.html(this.title||"");this.updateTitleContainer();},setIcon:function(iconClass,force){force=force||false;if(typeof iconClass!=="undefined"){if(typeof iconClass=="string"){this.icon=iconClass;}else{if(typeof iconClass==="function"){var response=iconClass();if(typeof response=="string"){this.icon=response;}else{this.icon=false;}}else{this.icon=false;}}}if(this.isAjaxLoading&&!force){return;}this.$icon.html(this.icon?'<i class="'+this.icon+'"></i>':"");this.updateTitleContainer();},updateTitleContainer:function(){if(!this.title&&!this.icon){this.$titleContainer.hide();}else{this.$titleContainer.show();}},setContentPrepend:function(content,force){if(!content){return;}this.contentParsed.prepend(content);},setContentAppend:function(content){if(!content){return;}this.contentParsed.append(content);},setContent:function(content,force){force=!!force;var that=this;if(content){this.contentParsed.html("").append(content);}if(this.isAjaxLoading&&!force){return;}this.$content.html("");this.$content.append(this.contentParsed);setTimeout(function(){that.$body.find("input[autofocus]:visible:first").focus();},100);},loadingSpinner:false,showLoading:function(disableButtons){this.loadingSpinner=true;this.$jconfirmBox.addClass("loading");if(disableButtons){this.$btnc.find("button").prop("disabled",true);}},hideLoading:function(enableButtons){this.loadingSpinner=false;this.$jconfirmBox.removeClass("loading");if(enableButtons){this.$btnc.find("button").prop("disabled",false);}},ajaxResponse:false,contentParsed:"",isAjax:false,isAjaxLoading:false,_parseContent:function(){var that=this;var e="&nbsp;";if(typeof this.content=="function"){var res=this.content.apply(this);if(typeof res=="string"){this.content=res;}else{if(typeof res=="object"&&typeof res.always=="function"){this.isAjax=true;this.isAjaxLoading=true;res.always(function(data,status,xhr){that.ajaxResponse={data:data,status:status,xhr:xhr};that._contentReady.resolve(data,status,xhr);if(typeof that.contentLoaded=="function"){that.contentLoaded(data,status,xhr);}});this.content=e;}else{this.content=e;}}}if(typeof this.content=="string"&&this.content.substr(0,4).toLowerCase()==="url:"){this.isAjax=true;this.isAjaxLoading=true;var u=this.content.substring(4,this.content.length);$.get(u).done(function(html){that.contentParsed.html(html);}).always(function(data,status,xhr){that.ajaxResponse={data:data,status:status,xhr:xhr};that._contentReady.resolve(data,status,xhr);if(typeof that.contentLoaded=="function"){that.contentLoaded(data,status,xhr);}});}if(!this.content){this.content=e;}if(!this.isAjax){this.contentParsed.html(this.content);this.setContent();that._contentReady.resolve();}},_stopCountDown:function(){clearInterval(this.autoCloseInterval);if(this.$cd){this.$cd.remove();}},_startCountDown:function(){var that=this;var opt=this.autoClose.split("|");if(opt.length!==2){console.error("Invalid option for autoClose. example 'close|10000'");return false;}var button_key=opt[0];var time=parseInt(opt[1]);if(typeof this.buttons[button_key]==="undefined"){console.error("Invalid button key '"+button_key+"' for autoClose");return false;}var seconds=Math.ceil(time/1000);this.$cd=$('<span class="countdown"> ('+seconds+")</span>").appendTo(this["$_"+button_key]);this.autoCloseInterval=setInterval(function(){that.$cd.html(" ("+(seconds-=1)+") ");if(seconds<=0){that["$$"+button_key].trigger("click");that._stopCountDown();}},1000);},_getKey:function(key){switch(key){case 192:return"tilde";case 13:return"enter";case 16:return"shift";case 9:return"tab";case 20:return"capslock";case 17:return"ctrl";case 91:return"win";case 18:return"alt";case 27:return"esc";case 32:return"space";}var initial=String.fromCharCode(key);if(/^[A-z0-9]+$/.test(initial)){return initial.toLowerCase();}else{return false;}},reactOnKey:function(e){var that=this;var a=$(".jconfirm");if(a.eq(a.length-1)[0]!==this.$el[0]){return false;}var key=e.which;if(this.$content.find(":input").is(":focus")&&/13|32/.test(key)){return false;}var keyChar=this._getKey(key);if(keyChar==="esc"&&this.escapeKey){if(this.escapeKey===true){this.$scrollPane.trigger("click");}else{if(typeof this.escapeKey==="string"||typeof this.escapeKey==="function"){var buttonKey;if(typeof this.escapeKey==="function"){buttonKey=this.escapeKey();}else{buttonKey=this.escapeKey;}if(buttonKey){if(typeof this.buttons[buttonKey]==="undefined"){console.warn("Invalid escapeKey, no buttons found with key "+buttonKey);}else{this["$_"+buttonKey].trigger("click");}}}}}$.each(this.buttons,function(key,button){if(button.keys.indexOf(keyChar)!=-1){that["$_"+key].trigger("click");}});},setDialogCenter:function(){console.info("setDialogCenter is deprecated, dialogs are centered with CSS3 tables");},_unwatchContent:function(){clearInterval(this._timer);},close:function(onClosePayload){var that=this;if(typeof this.onClose==="function"){this.onClose(onClosePayload);}this._unwatchContent();$(window).unbind("resize."+this._id);$(window).unbind("keyup."+this._id);$(window).unbind("jcKeyDown."+this._id);if(this.draggable){$(window).unbind("mousemove."+this._id);$(window).unbind("mouseup."+this._id);this.$titleContainer.unbind("mousedown");}that.$el.removeClass(that.loadedClass);$("body").removeClass("jconfirm-no-scroll-"+that._id);that.$jconfirmBoxContainer.removeClass("jconfirm-no-transition");setTimeout(function(){that.$body.addClass(that.closeAnimationParsed);that.$jconfirmBg.addClass("jconfirm-bg-h");var closeTimer=(that.closeAnimation==="none")?1:that.animationSpeed;setTimeout(function(){that.$el.remove();var l=jconfirm.instances;var i=jconfirm.instances.length-1;for(i;i>=0;i--){if(jconfirm.instances[i]._id===that._id){jconfirm.instances.splice(i,1);}}if(!jconfirm.instances.length){if(that.scrollToPreviousElement&&jconfirm.lastFocused&&jconfirm.lastFocused.length&&$.contains(document,jconfirm.lastFocused[0])){var $lf=jconfirm.lastFocused;if(that.scrollToPreviousElementAnimate){var st=$(window).scrollTop();var ot=jconfirm.lastFocused.offset().top;var wh=$(window).height();if(!(ot>st&&ot<(st+wh))){var scrollTo=(ot-Math.round((wh/3)));$("html, body").animate({scrollTop:scrollTo},that.animationSpeed,"swing",function(){$lf.focus();});}else{$lf.focus();}}else{$lf.focus();}jconfirm.lastFocused=false;}}if(typeof that.onDestroy==="function"){that.onDestroy();}},closeTimer*0.4);},50);return true;},open:function(){if(this.isOpen()){return false;}this._buildHTML();this._bindEvents();this._open();return true;},setStartingPoint:function(){var el=false;if(this.animateFromElement!==true&&this.animateFromElement){el=this.animateFromElement;jconfirm.lastClicked=false;}else{if(jconfirm.lastClicked&&this.animateFromElement===true){el=jconfirm.lastClicked;jconfirm.lastClicked=false;}else{return false;}}if(!el){return false;}var offset=el.offset();var iTop=el.outerHeight()/2;var iLeft=el.outerWidth()/2;iTop-=this.$jconfirmBox.outerHeight()/2;iLeft-=this.$jconfirmBox.outerWidth()/2;var sourceTop=offset.top+iTop;sourceTop=sourceTop-this._scrollTop();var sourceLeft=offset.left+iLeft;var wh=$(window).height()/2;var ww=$(window).width()/2;var targetH=wh-this.$jconfirmBox.outerHeight()/2;var targetW=ww-this.$jconfirmBox.outerWidth()/2;sourceTop-=targetH;sourceLeft-=targetW;if(Math.abs(sourceTop)>wh||Math.abs(sourceLeft)>ww){return false;}this.$jconfirmBoxContainer.css("transform","translate("+sourceLeft+"px, "+sourceTop+"px)");},_open:function(){var that=this;if(typeof that.onOpenBefore==="function"){that.onOpenBefore();}this.$body.removeClass(this.animationParsed);this.$jconfirmBg.removeClass("jconfirm-bg-h");this.$body.focus();that.$jconfirmBoxContainer.css("transform","translate("+0+"px, "+0+"px)");setTimeout(function(){that.$body.css(that._getCSS(that.animationSpeed,1));that.$body.css({"transition-property":that.$body.css("transition-property")+", margin"});that.$jconfirmBoxContainer.addClass("jconfirm-no-transition");that._modalReady.resolve();if(typeof that.onOpen==="function"){that.onOpen();}that.$el.addClass(that.loadedClass);},this.animationSpeed);},loadedClass:"jconfirm-open",isClosed:function(){return !this.$el||this.$el.css("display")==="";},isOpen:function(){return !this.isClosed();},toggle:function(){if(!this.isOpen()){this.open();}else{this.close();}}};jconfirm.instances=[];jconfirm.lastFocused=false;jconfirm.pluginDefaults={template:'<div class="jconfirm"><div class="jconfirm-bg jconfirm-bg-h"></div><div class="jconfirm-scrollpane"><div class="jconfirm-row"><div class="jconfirm-cell"><div class="jconfirm-holder"><div class="jc-bs3-container"><div class="jc-bs3-row"><div class="jconfirm-box-container jconfirm-animated"><div class="jconfirm-box" role="dialog" aria-labelledby="labelled" tabindex="-1"><div class="jconfirm-closeIcon">&times;</div><div class="jconfirm-title-c"><span class="jconfirm-icon-c"></span><span class="jconfirm-title"></span></div><div class="jconfirm-content-pane"><div class="jconfirm-content"></div></div><div class="jconfirm-buttons"></div><div class="jconfirm-clear"></div></div></div></div></div></div></div></div></div></div>',title:"Hello",titleClass:"",type:"default",typeAnimated:true,draggable:true,dragWindowGap:15,dragWindowBorder:true,animateFromElement:true,alignMiddle:true,smoothContent:true,content:"Are you sure to continue?",buttons:{},defaultButtons:{ok:{action:function(){}},close:{action:function(){}}},contentLoaded:function(){},icon:"",lazyOpen:false,bgOpacity:null,theme:"light",animation:"scale",closeAnimation:"scale",animationSpeed:400,animationBounce:1,escapeKey:true,rtl:false,container:"body",containerFluid:false,backgroundDismiss:false,backgroundDismissAnimation:"shake",autoClose:false,closeIcon:null,closeIconClass:false,watchInterval:100,columnClass:"col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1",boxWidth:"50%",scrollToPreviousElement:true,scrollToPreviousElementAnimate:true,useBootstrap:true,offsetTop:40,offsetBottom:40,bootstrapClasses:{container:"container",containerFluid:"container-fluid",row:"row"},onContentReady:function(){},onOpenBefore:function(){},onOpen:function(){},onClose:function(){},onDestroy:function(){},onAction:function(){}};var keyDown=false;$(window).on("keydown",function(e){if(!keyDown){var $target=$(e.target);var pass=false;if($target.closest(".jconfirm-box").length){pass=true;}if(pass){$(window).trigger("jcKeyDown");}keyDown=true;}});$(window).on("keyup",function(){keyDown=false;});jconfirm.lastClicked=false;$(document).on("mousedown","button, a",function(){jconfirm.lastClicked=$(this);});})(jQuery,window);
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(global, module) {/**
@@ -50116,10 +50160,10 @@
 	  }
 	}.call(this));
 
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(49)(module)))
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(50)(module)))
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports) {
 
 	module.exports = function(module) {

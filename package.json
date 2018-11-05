@@ -15,7 +15,7 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
     "html-loader": "^0.4.3",
-    "node-sass": "^4.6.1",
+    "node-sass": "^4.10.0",
     "sass-loader": "^3.2.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
@@ -34,6 +34,7 @@
     "vue": "^1.0.24",
     "lodash": "^4.13.1",
     "vue-strap": "^1.0.11",
+    "vuejs-auto-complete": "0.8.0",
     "jquery-confirm": "3.3.2"
   }
 }

@@ -5,15 +5,16 @@
     <p>
         <strong>Based on Vue.js and Bootstrap</strong>
     </p>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam pellentesque elit eget varius. Pellentesque vestibulum varius rhoncus. Sed vel hendrerit ligula, at iaculis urna. Phasellus massa nisi, commodo ac porttitor nec, bibendum vel lorem. Nunc consectetur massa a diam viverra, in ornare ligula dictum. Aenean libero eros, euismod et orci eget, sodales fermentum mi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam molestie feugiat bibendum. Nunc non finibus enim. Donec eget fringilla dolor. Integer nec hendrerit arcu.
+    <p class="md-content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam pellentesque elit eget varius. Pellentesque vestibulum varius rhoncus. Sed vel hendrerit ligula, at iaculis urna. Phasellus massa nisi, commodo ac porttitor nec, bibendum vel lorem. Nunc consectetur massa a diam viverra, in ornare ligula dictum. Aenean libero eros, euismod et orci eget, sodales fermentum mi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam molestie feugiat bibendum. Nunc non finibus enim. Donec eget fringilla dolor. <span class="md-ink-ripple">Integer nec hendrerit arcu.</span>
     </p>
     <p class="text-center" v-if="!$root.isAuthenticated">
         <a id="sign-in" class="btn btn-lg btn-default" v-link="'/signin'">Sign In</a>
         <a id="sign-up" class="btn btn-lg btn-default" v-link="'/signup'">Sign Up</a>
     </p>
 	<p>Checkbox:
-	  <input type="checkbox" name="checkboxinput" value="1">
+	  <input type="checkbox" name="checkboxinput" value="1"> checkbox 1<br>
+	  <input type="checkbox" name="checkboxinput2" value="2"> checkbox 2
     </p>
 	<p>Radio:
 	  <input name="_fsradio2" type="radio" value="1">
@@ -22,35 +23,87 @@
 	<p>Input text:
 	  <input type="text" name="textinput" value="">
     </p>
-	<p>
-	  Select:
-	  <select name="selectinput" id="dropdown">
-	    <option value="1">Option 1</option>
-	    <option value="2">Option 2</option>
-	    <option value="3">Option 3</option>
+	<div class="example">
+	  <h3>Dropdown List</h3>
+	  <select id="dropdown" name="documentation-version">
+		  <option value="" disabled="disabled" selected="selected">Please select an option</option>
+		  <option value="1">Option 1</option>
+		  <option value="2">Option 2</option>
 	  </select>
+	</div>	
+	<p>
+	  User profile:<br>
+	  <input type="text" name="userfirstname" ng-model="user.firstName" value=""><br>
+	  <input type="text" name="usersecondname" ng-model="user.lastName" value=""><br>
+	  <input type="text" name="company" ng-model="user.company" value=""><br>
+	  <input type="button" value="Save">
     </p>
 	<p>
+	  Text with 'abc'. And below two paragraphs with this text.
     </p>
 	<p>
+	  Text with 'abc'.
     </p>
 	<p>
+	  Abc abc abc. 123 123 123 .
     </p>
 	<p>
+	  123 123 123 123 . xyz xyz xyz.
+    </p>
+	<div class="example">
+	  <h3>File Downloader</h3>
+		<a href="download/1.jpg">1.jpg</a>
+		<br>
+		<a href="download/some-file.txt">some-file.txt</a>
+		<br>	  
+		<a href="download/1.png">1.png</a>
+		<br>	  
+		<a href="download/ObjectivityTestAutomationCSHarpFramework.txt">ObjectivityTestAutomationCSHarpFramework.txt</a>
+		<br>	  
+		<a href="download/LeapTest.AutomationStudio.exe">LeapTest.AutomationStudio.exe</a>
+		<br>	  
+		<a href="download/selenium-java-3.141.0.jar">selenium-java-3.141.0.jar</a>
+		<br>	  
+		<a href="download/uploadanddownload.txt">uploadanddownload.txt</a>
+		<br>
+	  
+	</div>	
+	<div class="example">
+	  <h3>Drag and Drop</h3>
+	  <div id="columns">
+		<div class="column" id="column-a" draggable="true"><header>A</header></div>
+		<div class="column" id="column-b" draggable="true"><header>B</header></div>
+	  </div>
+	</div>	
+	<p class="clear">
+	  Button:
+	  <button id="abc" name="name" class="button">Button</button>
+	  <a href="#name">Button</a>
+    </p>
+	<p md-svg-src="img/icons/android.svg">
+	  SelenideSelectors test:
+	  <button class="buy" title="my_title" value="my_value">Basic Usage</button>
     </p>
 	<p>
+	  Redundant Selectors
+	  <input type="text" name="abc" title="cde" value="fgh" id="ijk" class="xyz">
+    </p>
+	<p class="container">
+	  <span>abc</span>
+	  <span class="subarea">
+	    <b>Bottom Sheet</b>
+	  </span>
+	  <ul>
+	    <li>list item 1</li>
+	    <li>list item 2</li>
+	  </ul>
     </p>
 	<p>
+	  Not visible text next to it, will be visible in 2 sec and disappear in 4 sec: <span class="waiting">Not ready</span>
     </p>
 	<p>
-    </p>
-	<p>
-    </p>
-	<p>
-    </p>
-	<p>
-    </p>
-	<p>
+	 Autocomplete:
+	<autocomplete :source="[{id:1,name:'abc'},{id:2,name:'def'}]" :placeholder="Enter US State"></autocomplete>
     </p>
 	<p>
     </p>

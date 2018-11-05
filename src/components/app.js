@@ -38,7 +38,7 @@ module.exports = {
         }
     },
     components: {
-        notFound: {
+       notFound: {
             template: require('./not-found.html')
         }
     }

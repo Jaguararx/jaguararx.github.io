@@ -59,6 +59,31 @@ textarea#notes {
 
 .has-error .checkbox .help-block {
   padding-left: 20px; }
+
+.column {
+  height: 150px;
+  width: 150px;
+  float: left;
+  border: 2px solid #666666;
+  background-color: #ccc;
+  margin-right: 5px;
+  text-align: center;
+  cursor: move; }
+
+.column, .columns {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  float: left; }
+
+[class*="column"] + [class*="column"]:last-child {
+  float: right; }
+
+.waiting {
+  display: none; }
+
+.clear {
+  clear: both; }
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
