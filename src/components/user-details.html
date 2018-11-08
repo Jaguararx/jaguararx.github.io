@@ -2,9 +2,9 @@
     <div class="page-header">
         <h1 class="text-center">{{ $root.title }}</h1>
     </div>
-    <div v-if="summary.email" class="summary-container">
+    <div v-if="summary" class="summary-container">
         <div class="row details-list">
-            <dl class="col-sm-6">
+            <dl class="col-sm-6" v-show="summary.email">
                 <dt>Email</dt>
                 <dd>{{ summary.email }}</dd>
             </dl>
