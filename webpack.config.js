@@ -2,7 +2,9 @@
 var ExtractTextPlugin = require("extract-text-webpack-plugin")
 
 module.exports = {
-    entry: ['./src/index.js'],
+    entry: {
+		index: './src/index.js'
+	},
     output: {
         path: __dirname + '/build/',
         filename: 'build.js'
@@ -13,7 +15,7 @@ module.exports = {
             { test: /\.html$/, loader: "html" },
             { test: /\.css$/, loader: ExtractTextPlugin.extract("css-loader") },
             { test: /\.scss$/, loader: ExtractTextPlugin.extract('style', 'css!sass') },
-            { test: /\.vue$/, loader: 'vue' },
+            { test: /\.vue$/, loader: 'vue-loader' },
             { test: /\.(woff|woff2)$/, loader: "url-loader?limit=10000&mimetype=application/font-woff" },
             { test: /\.ttf$/, loader: "file-loader" },
             { test: /\.eot$/, loader: "file-loader" },
@@ -26,5 +28,10 @@ module.exports = {
     babel: {
         presets: ['es2015'],
         plugins: ['transform-runtime']
-    }
+    },
+	resolve: {
+	  alias: {
+		vue: 'vue/dist/vue.js'
+	  }
+	}
 }

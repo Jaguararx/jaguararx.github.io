@@ -13,9 +13,9 @@
             return val1 && val2 ? val1 + val2 : null;
         }
     },
-    route: {
-        activate() {
-            this.$root.title = 'Calculations'
-        }
+	beforeRouteEnter(to, from, next) {
+		next(vm => {
+            vm.$root.title = 'Calculations'
+	    })
     }
 }

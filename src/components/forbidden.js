@@ -1,8 +1,8 @@
 ﻿module.exports = {
     template: require('./forbidden.html'),
-    route: {
-        activate() {
-            this.$root.title = 'Forbidden';
-        }
+	beforeRouteEnter(to, from, next) {
+		next(vm => {
+            vm.$root.title = 'Forbidden';
+	    })
     }
 }

@@ -1,7 +1,7 @@
 ﻿module.exports = {
-    route: {
-        activate() {
-            this.$root.showNotFound()
-        }
+	beforeRouteEnter(to, from, next) {
+		next(vm => {
+            vm.$root.showNotFound()
+	    })
     }
 }

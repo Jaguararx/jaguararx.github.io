@@ -17,10 +17,10 @@
             return this.bsDeletionItem != null
         }
     },
-    route: {
-        activate() {
-            this.$root.title = 'Products'
-        }
+	beforeRouteEnter(to, from, next) {
+		next(vm => {
+            vm.$root.title = 'Products'
+	    })
     },
     methods: {
         remove(item) {

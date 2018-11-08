@@ -1,6 +1,6 @@
 ﻿module.exports = {
     storageKey: 'users',
-    new () {
+    newuser() {
         var allUsers = this.getAll()
         var latestUser = _.maxBy(allUsers, function (i) { return i.id })
         var id = latestUser != null ? latestUser.id + 1 : 1

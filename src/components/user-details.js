@@ -7,19 +7,18 @@ module.exports = {
             summary: null
         }
     },
-    route: {
-        canReuse: false,
-        activate() {
+	beforeRouteEnter(to, from, next) {
+		next(vm => {
             try
             {
-                var id = Number(this.$route.params.userId)
-                this.summary = UserService.get(id)
-                this.$root.title = this.summary.firstName + ' ' + this.summary.lastName
+                var id = Number(vm.$route.params.userId)
+                vm.summary = UserService.get(id)
+                vm.$root.title = vm.summary.firstName + ' ' + vm.summary.lastName
             }
             catch (e)
             {
-                this.$root.showNotFound()
+                vm.$root.showNotFound()
             }
-        }
+	    })
     }
 }

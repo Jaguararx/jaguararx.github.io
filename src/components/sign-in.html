@@ -2,28 +2,24 @@
     <div class="page-header">
         <h1 class="text-center">{{ $root.title }}</h1>
     </div>
-    <validator name="validation">
-        <div>
-            <div class="form-group" v-bind:class="{ 'has-error': $validation.email.invalid }">
-                <label for="email">Email</label>
-                <span class="help-block" v-if="$validation.email.invalid">
-                    {{ $validation.email.errors[0].message }}
-                </span>
-                <input type="text" id="email" v-model="email" class="form-control"
-                       detect-change="off" v-validate:email="rules.email" />
-            </div>
-            <div class="form-group" v-bind:class="{ 'has-error': $validation.password.invalid }">
-                <label for="password">Password</label>
-                <span class="help-block" v-if="$validation.password.invalid">
-                    {{ $validation.password.errors[0].message }}
-                </span>
-                <input type="password" id="password" v-model="password" class="form-control"
-                       detect-change="off" v-validate:password="rules.password" />
-            </div>
-            <input type="submit" value="Sign In" v-on:click="signIn" class="btn btn-primary" />
-            <br />
-            <br />
-            <p class="text-muted">Use <b>admin@mail.com</b>/<b>abc123</b> credentials</p>
-        </div>
-    </validator>
+	<div>
+		<div class="form-group" v-bind:class="{ 'has-error': errors.has('email') }">
+			<label for="email">Email</label>
+			<span class="help-block" v-show="errors.has('email')">
+				{{ errors.first('email') }}
+			</span>
+			<input type="text" v-model="email" name="email" id="email" v-validate="'required|email|min:5|max:256'"  class="form-control" />
+		</div>
+		<div class="form-group" v-bind:class="{ 'has-error': errors.has('password') }">
+			<label for="password">Password</label>
+			<span class="help-block" v-show="errors.has('password')">
+				{{ errors.first('password') }}
+			</span>
+			<input type="password" v-model="password" name="password" id="password" v-validate="'required|min:3|max:16'" class="form-control" />
+		</div>
+		<input type="submit" value="Sign In" v-on:click="signIn" class="btn btn-primary" />
+		<br />
+		<br />
+		<p class="text-muted">Use <b>admin@mail.com</b>/<b>abc123</b> credentials</p>
+	</div>
 </div>

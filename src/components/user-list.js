@@ -1,35 +1,24 @@
-﻿import Rules from '../validator-rules.js'
+﻿import Vue from 'vue'
 import AuthenticationService from '../services/authentication-service.js'
 import UserService from '../services/user-service.js'
+import { Validator } from 'vee-validate';
 
+
+Validator.extend('uniqueEmail', {
+  getMessage: value => value + ' is already used by another user.',
+  validate: value => function (value) {
+                return UserService.isEmailUnique(value)
+            }
+});
 module.exports = {
     template: require('./user-list.html'),
-    validators: {
-        uniqueEmail: {
-            message: 'is already used by another user',
-            check: function (value) {
-                return this._vm.editItem.isNew
-                    ? UserService.isEmailUnique(value)
-                    : true;
-            }
-        }
-    },
     data() {
         return {
             items: UserService.getAll(),
             editItem: {
                 title: null,
                 isNew: true,
-                data: null,
-                rules: {
-                    firstName: Rules.create().required().minLength(2).maxLength(128).build(),
-                    lastName: Rules.create().required().minLength(2).maxLength(128).build(),
-                    email: Rules.create().required().email().maxLength(256).local('uniqueEmail').build(),
-                    office: Rules.create().required().build(),
-                    gender: Rules.create().required().build(),
-                    birthday: Rules.create().empty().build(),
-                    notes: Rules.create().maxLength(2000).build()
-                }
+                data: null
             }
         }
     },
@@ -38,16 +27,16 @@ module.exports = {
             return this.editItem.data != null
         }
     },
-    route: {
-        activate() {
-            this.$root.title = 'Users';
-        }
+	beforeRouteEnter(to, from, next) {
+		next(vm => {
+            vm.$root.title = 'Users';
+	    })
     },
     methods: {
-        new() {
+        newuser() {
             this.editItem.title = 'New User'
             this.editItem.isNew = true
-            this.editItem.data = UserService.new()
+            this.editItem.data = UserService.newuser()
         },
         edit(item) {
             this.editItem.title = item.firstName + ' ' + item.lastName;
@@ -67,26 +56,26 @@ module.exports = {
             }
         },
         create() {
-            this.$validate()
-
-            if (this.$validation.valid) {
-                this.editItem.data.password = 'abc123';
-                this.items.push(this.editItem.data)
-
-                UserService.saveAll(this.items);
-                this.editItem.data = null;
-            }
+			this.$validator.validate().then(result => {
+				if (!result) {
+				} else {
+					this.editItem.data.password = 'abc123';
+					this.items.push(this.editItem.data)
+					UserService.saveAll(this.items);
+					this.editItem.data = null;				
+				}
+			  });
         },
         update() {
-            this.$validate()
-
-            if (this.$validation.valid) {
-                var itemIndex = _.findIndex(this.items, { 'id': this.editItem.data.id })
-                this.items.$set(itemIndex, this.editItem.data);
-
-                UserService.saveAll(this.items);
-                this.editItem.data = null;
-            }
+			this.$validator.validate().then(result => {
+				if (!result) {
+				} else {
+					var itemIndex = _.findIndex(this.items, { 'id': this.editItem.data.id })
+					Vue.set(this.items, itemIndex, this.editItem.data)
+					UserService.saveAll(this.items);
+					this.editItem.data = null;
+				}
+			  });
         },
         cancelEditing() {
             this.editItem.data = null;

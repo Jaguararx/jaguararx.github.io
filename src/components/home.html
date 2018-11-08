@@ -9,18 +9,18 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam pellentesque elit eget varius. Pellentesque vestibulum varius rhoncus. Sed vel hendrerit ligula, at iaculis urna. Phasellus massa nisi, commodo ac porttitor nec, bibendum vel lorem. Nunc consectetur massa a diam viverra, in ornare ligula dictum. Aenean libero eros, euismod et orci eget, sodales fermentum mi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam molestie feugiat bibendum. Nunc non finibus enim. Donec eget fringilla dolor. <span class="md-ink-ripple">Integer nec hendrerit arcu.</span>
     </p>
     <p class="text-center" v-if="!$root.isAuthenticated">
-        <a id="sign-in" class="btn btn-lg btn-default" v-link="'/signin'">Sign In</a>
-        <a id="sign-up" class="btn btn-lg btn-default" v-link="'/signup'">Sign Up</a>
+        <router-link to="/signin" id="sign-in" class="btn btn-lg btn-default">Sign In</router-link>
+        <router-link to="/signup" id="sign-up" class="btn btn-lg btn-default">Sign Up</router-link>
     </p>
-	<p>Checkbox:
+	<p>Checkbox:<br>
 	  <input type="checkbox" name="checkboxinput" value="1"> checkbox 1<br>
 	  <input type="checkbox" name="checkboxinput2" value="2"> checkbox 2
     </p>
-	<p>Radio:
-	  <input name="_fsradio2" type="radio" value="1">
+	<p>Radio:<br>
+	  <input name="_fsradio2" type="radio" value="1"><br>
 	  <input name="_fsradio2" type="radio" value="2">
     </p>
-	<p>Input text:
+	<p>Input text:<br>
 	  <input type="text" name="textinput" value="">
     </p>
 	<div class="example">
@@ -33,9 +33,9 @@
 	</div>	
 	<p>
 	  User profile:<br>
-	  <input type="text" name="userfirstname" ng-model="user.firstName" value=""><br>
-	  <input type="text" name="usersecondname" ng-model="user.lastName" value=""><br>
-	  <input type="text" name="company" ng-model="user.company" value=""><br>
+	  <input type="text" name="userfirstname" ng-model="user.firstName" value=""><br><br>
+	  <input type="text" name="usersecondname" ng-model="user.lastName" value=""><br><br>
+	  <input type="text" name="company" ng-model="user.company" value=""><br><br>
 	  <input type="button" value="Save">
     </p>
 	<p>
@@ -60,10 +60,6 @@
 		<br>	  
 		<a href="download/ObjectivityTestAutomationCSHarpFramework.txt">ObjectivityTestAutomationCSHarpFramework.txt</a>
 		<br>	  
-		<a href="download/LeapTest.AutomationStudio.exe">LeapTest.AutomationStudio.exe</a>
-		<br>	  
-		<a href="download/selenium-java-3.141.0.jar">selenium-java-3.141.0.jar</a>
-		<br>	  
 		<a href="download/uploadanddownload.txt">uploadanddownload.txt</a>
 		<br>
 	  
@@ -75,9 +71,17 @@
 		<div class="column" id="column-b" draggable="true"><header>B</header></div>
 	  </div>
 	</div>	
-	<p class="clear">
-	  Button:
-	  <button id="abc" name="name" class="button">Button</button>
+	<p class="clear"><br><br>
+	 <h3 class="autocompletetitle">Autocomplete:</h3>
+	 <cool-select
+	     v-model="selected"
+        :items="items"
+        placeholder="Select US State"
+      />
+    </p>
+	<p><br>
+	  Button:<br>
+	  <button id="abc" name="name" class="button">Button</button><br>
 	  <a href="#name">Button</a>
     </p>
 	<p md-svg-src="img/icons/android.svg">
@@ -89,7 +93,7 @@
 	  <input type="text" name="abc" title="cde" value="fgh" id="ijk" class="xyz">
     </p>
 	<p class="container">
-	  <span>abc</span>
+	  <span>abc</span><br>
 	  <span class="subarea">
 	    <b>Bottom Sheet</b>
 	  </span>
@@ -100,10 +104,6 @@
     </p>
 	<p>
 	  Not visible text next to it, will be visible in 2 sec and disappear in 4 sec: <span class="waiting">Not ready</span>
-    </p>
-	<p>
-	 Autocomplete:
-	<autocomplete :source="[{id:1,name:'abc'},{id:2,name:'def'}]" :placeholder="Enter US State"></autocomplete>
     </p>
 	<p>
     </p>

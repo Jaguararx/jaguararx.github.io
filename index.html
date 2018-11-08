@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="build/build.css">
 </head>
 <body layout="row">
+  <div id="app">
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -18,21 +19,21 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a v-link="'/'" id="brand-title" class="navbar-brand">COE Test Automation Sample App</a>
+                <router-link to="/" id="brand-title" class="navbar-brand">COE Test Automation Sample App</router-link>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="nav navbar-nav">
                     <li v-bind:class="{ active: $route.path === '/plans' }">
-                        <a v-link="'/plans'">Plans</a>
+                        <router-link to="/plans">Plans</router-link>
                     </li>
                     <li v-bind:class="{ active: $route.path === '/products' }">
-                        <a v-link="'/products'">Products</a>
+                        <router-link to="/products">Products</router-link>
                     </li>
                     <li v-bind:class="{ active: $route.path === '/calculations' }">
-                        <a v-link="'/calculations'">Calculations</a>
+                        <router-link to="/calculations">Calculations</router-link>
                     </li>
                     <li v-if="isAuthenticated" v-bind:class="{ active: $route.path === '/users' }">
-                        <a v-link="'/users'">Users</a>
+                        <router-link to="/users">Users</router-link>
                     </li>
                 </ul>
                 <ul v-if="isAuthenticated" class="nav navbar-nav navbar-right">
@@ -40,7 +41,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="#" v-link="'settings'">Settings</a>
+                                <router-link to="settings" href="#">Settings</router-link>
                             </li>
                             <li role="separator" class="divider"></li>
                             <li>
@@ -51,22 +52,23 @@
                 </ul>
                 <ul v-else class="nav navbar-nav navbar-right">
                     <li v-bind:class="{ active: $route.path === '/signin' }">
-                        <a v-link="'/signin'">Sign In</a>
+                        <router-link to="/signin">Sign In</router-link>
                     </li>
                     <li v-bind:class="{ active: $route.path === '/signup' }">
-                        <a v-link="'/signup'">Sign Up</a>
+                        <router-link to="/signup">Sign Up</router-link>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="container" v-show="!errors.notFound">
-        <router-view></router-view>
+    <div class="container" v-show="!apperrors.notFound">
+		<router-view></router-view>
     </div>
-    <div class="container" v-if="errors.notFound">
+    <div class="container" v-if="apperrors.notFound">
         <not-found></not-found>
     </div>
 
-    <script src="build/build.js"></script>
+  </div>
+  <script src="build/build.js"></script>
 </body>
 </html>

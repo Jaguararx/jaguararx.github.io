@@ -1,8 +1,8 @@
 ﻿module.exports = {
     template: require('./settings.html'),
-    route: {
-        activate() {
-            this.$root.title = 'Settings'
-        }
+	beforeRouteEnter(to, from, next) {
+		next(vm => {
+            vm.$root.title = 'Settings'
+	    })
     }
 }
