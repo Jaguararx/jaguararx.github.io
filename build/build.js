@@ -117,7 +117,7 @@
 	    };
 	};
 
-	var router = new _vueRouter2.default({ routes: [{ path: '', component: __webpack_require__(30) }, { path: '/signin', component: __webpack_require__(40) }, { path: '/signup', component: __webpack_require__(42) }, { path: '/plans', component: __webpack_require__(34) }, { path: '/products', component: __webpack_require__(36) }, { path: '/calculations', component: __webpack_require__(28) }, { path: '/settings', component: requireWithAuthentication('./components/settings.js') }, { path: '/users', component: requireWithAuthentication('./components/user-list.js') }, { path: '/users/:userId', component: requireWithAuthentication('./components/user-details.js') }, { path: '*', component: __webpack_require__(32) }]
+	var router = new _vueRouter2.default({ routes: [{ path: '', component: __webpack_require__(30) }, { path: '/signin', component: __webpack_require__(42) }, { path: '/signup', component: __webpack_require__(44) }, { path: '/plans', component: __webpack_require__(36) }, { path: '/products', component: __webpack_require__(38) }, { path: '/calculations', component: __webpack_require__(28) }, { path: '/javadoc', component: __webpack_require__(32) }, { path: '/settings', component: requireWithAuthentication('./components/settings.js') }, { path: '/users', component: requireWithAuthentication('./components/user-list.js') }, { path: '/users/:userId', component: requireWithAuthentication('./components/user-details.js') }, { path: '*', component: __webpack_require__(34) }]
 	});
 	router.afterEach(function (to, from) {
 	    if (typeof router.app != 'undefined' && typeof router.app.clearErrors != 'undefined') {
@@ -161,7 +161,7 @@
 	    },
 	    components: {
 	        notFound: {
-	            template: __webpack_require__(33)
+	            template: __webpack_require__(35)
 	        }
 	    }
 	});
@@ -56419,30 +56419,33 @@
 		"./components/home": 30,
 		"./components/home.html": 31,
 		"./components/home.js": 30,
-		"./components/not-found": 32,
-		"./components/not-found.html": 33,
-		"./components/not-found.js": 32,
-		"./components/plans": 34,
-		"./components/plans.html": 35,
-		"./components/plans.js": 34,
-		"./components/products": 36,
-		"./components/products.html": 37,
-		"./components/products.js": 36,
-		"./components/settings": 38,
-		"./components/settings.html": 39,
-		"./components/settings.js": 38,
-		"./components/sign-in": 40,
-		"./components/sign-in.html": 41,
-		"./components/sign-in.js": 40,
-		"./components/sign-up": 42,
-		"./components/sign-up.html": 43,
-		"./components/sign-up.js": 42,
-		"./components/user-details": 44,
-		"./components/user-details.html": 45,
-		"./components/user-details.js": 44,
-		"./components/user-list": 46,
-		"./components/user-list.html": 47,
-		"./components/user-list.js": 46,
+		"./components/javadoc": 32,
+		"./components/javadoc.html": 33,
+		"./components/javadoc.js": 32,
+		"./components/not-found": 34,
+		"./components/not-found.html": 35,
+		"./components/not-found.js": 34,
+		"./components/plans": 36,
+		"./components/plans.html": 37,
+		"./components/plans.js": 36,
+		"./components/products": 38,
+		"./components/products.html": 39,
+		"./components/products.js": 38,
+		"./components/settings": 40,
+		"./components/settings.html": 41,
+		"./components/settings.js": 40,
+		"./components/sign-in": 42,
+		"./components/sign-in.html": 43,
+		"./components/sign-in.js": 42,
+		"./components/sign-up": 44,
+		"./components/sign-up.html": 45,
+		"./components/sign-up.js": 44,
+		"./components/user-details": 46,
+		"./components/user-details.html": 47,
+		"./components/user-details.js": 46,
+		"./components/user-list": 48,
+		"./components/user-list.html": 49,
+		"./components/user-list.js": 48,
 		"./css/main.scss": 13,
 		"./directives": 26,
 		"./directives.js": 26,
@@ -56544,6 +56547,28 @@
 
 /***/ }),
 /* 32 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	module.exports = {
+					template: __webpack_require__(33),
+					beforeRouteEnter: function beforeRouteEnter(to, from, next) {
+									next(function (vm) {
+													vm.$root.title = 'COE Test Automation Framework (Java) Documentation';
+													jQuery('html').addClass('allwidth');
+									});
+					}
+	};
+
+/***/ }),
+/* 33 */
+/***/ (function(module, exports) {
+
+	module.exports = "<div class=\"allwidthdiv\">\r\n    <div class=\"page-header\">\r\n        <h1 class=\"text-center\">{{ $root.title }}</h1>\r\n    </div>\r\n\t<iframe src=\"/javadoc/overview-summary.html\" >\r\n\t</iframe>\r\n</div>\r\n";
+
+/***/ }),
+/* 34 */
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -56557,19 +56582,19 @@
 	};
 
 /***/ }),
-/* 33 */
+/* 35 */
 /***/ (function(module, exports) {
 
 	module.exports = "<h1 class=\"text-center\">\r\n    <span class=\"label label-danger\">404</span>\r\n    <br />\r\n    <br />\r\n    Page Not Found\r\n</h1>";
 
 /***/ }),
-/* 34 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	module.exports = {
-	    template: __webpack_require__(35),
+	    template: __webpack_require__(37),
 	    beforeRouteEnter: function beforeRouteEnter(to, from, next) {
 	        next(function (vm) {
 	            vm.$root.title = 'Plans';
@@ -56578,19 +56603,19 @@
 	};
 
 /***/ }),
-/* 35 */
+/* 37 */
 /***/ (function(module, exports) {
 
 	module.exports = "<div class=\"col-lg-8 col-lg-offset-2\">\r\n    <div class=\"page-header\">\r\n        <h1 class=\"text-center\">{{ $root.title }}</h1>\r\n    </div>\r\n    <p>\r\n        Please choose your payment plan.\r\n    </p>\r\n    <p>\r\n        The provided information is just for testing purposes.\r\n    </p>\r\n    <div class=\"row\">\r\n        <div class=\"col-sm-4 plan-item\">\r\n            <h3>Basic</h3>\r\n            <b class=\"price\">$0</b> (FREE)\r\n            <p>Number of projects: <b class=\"projects-num\">1</b></p>\r\n            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam pellentesque elit eget varius.</p>\r\n            <ul class=\"feature-list\">\r\n                <li><span class=\"glyphicon glyphicon-ok\"></span>Feature 1</li>\r\n                <li><span class=\"glyphicon glyphicon-ok\"></span>Feature 2</li>\r\n            </ul>\r\n        </div>\r\n        <div class=\"col-sm-4 plan-item\">\r\n            <h3>Plus</h3>\r\n            <b class=\"price\">$19.99</b> /month\r\n            <p>Number of projects: <b class=\"projects-num\">3</b></p>\r\n            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam pellentesque elit eget varius.</p>\r\n            <ul class=\"feature-list\">\r\n                <li><span class=\"glyphicon glyphicon-ok\"></span>Feature 1</li>\r\n                <li><span class=\"glyphicon glyphicon-ok\"></span>Feature 2</li>\r\n                <li><span class=\"glyphicon glyphicon-ok\"></span>Feature 3</li>\r\n                <li><span class=\"glyphicon glyphicon-ok\"></span>Feature 4</li>\r\n            </ul>\r\n        </div>\r\n        <div class=\"col-sm-4 plan-item\">\r\n            <h3>Premium</h3>\r\n            <b class=\"price\">$49.99</b> /month\r\n            <p>Number of projects: <b class=\"projects-num\">10</b></p>\r\n            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam pellentesque elit eget varius.</p>\r\n            <ul class=\"feature-list\">\r\n                <li><span class=\"glyphicon glyphicon-ok\"></span>Feature 1</li>\r\n                <li><span class=\"glyphicon glyphicon-ok\"></span>Feature 2</li>\r\n                <li><span class=\"glyphicon glyphicon-ok\"></span>Feature 3</li>\r\n                <li><span class=\"glyphicon glyphicon-ok\"></span>Feature 4</li>\r\n                <li><span class=\"glyphicon glyphicon-ok\"></span>Feature 5</li>\r\n                <li><span class=\"glyphicon glyphicon-ok\"></span>Feature 6</li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
 
 /***/ }),
-/* 36 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 
 	module.exports = {
-	    template: __webpack_require__(37),
+	    template: __webpack_require__(39),
 	    data: function data() {
 	        return {
 	            items: [{ name: "Table", price: "$125.00", amount: 50 }, { name: "Chair", price: "$35.00", amount: 120 }, { name: "Desk", price: "$130.00", amount: 70 }, { name: "Wardrobe", price: "$280.00", amount: 5 }, { name: "Armchair", price: "$180.00", amount: 15 }],
@@ -56653,31 +56678,10 @@
 	};
 
 /***/ }),
-/* 37 */
-/***/ (function(module, exports) {
-
-	module.exports = "<div>\r\n\t<div class=\"col-md-12\">\r\n\t\t<div class=\"page-header\">\r\n\t\t\t<h1 class=\"text-center\">{{ $root.title }}</h1>\r\n\t\t</div>\r\n\t\t<div class=\"table-responsive\">\r\n\t\t\t<table class=\"table table-hover\">\r\n\t\t\t\t<thead>\r\n\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t<th>Name</th>\r\n\t\t\t\t\t\t<th>Price</th>\r\n\t\t\t\t\t\t<th>Amount</th>\r\n\t\t\t\t\t\t<th></th>\r\n\t\t\t\t\t</tr>\r\n\t\t\t\t</thead>\r\n\t\t\t\t<tbody>\r\n\t\t\t\t\t<tr v-for=\"item in items\">\r\n\t\t\t\t\t\t<td>{{ item.name }}</td>\r\n\t\t\t\t\t\t<td>{{ item.price }}</td>\r\n\t\t\t\t\t\t<td>{{ item.amount }}</td>\r\n\t\t\t\t\t\t<td class=\"actions-column product-actions-column\">\r\n\t\t\t\t\t\t\t<button class=\"btn btn-default\" v-on:click=\"deleteUsingJSConfirm(item)\">Delete Using JS Confirm</button>\r\n\t\t\t\t\t\t\t<button class=\"btn btn-default\" v-on:click=\"deleteUsingBSModal(item)\">Delete Using BS Modal</button>\r\n\t\t\t\t\t\t\t<button class=\"btn btn-default\" v-on:click=\"deleteUsingJQueryConfirm(item)\">Delete Using jquery-confirm</button>\r\n\t\t\t\t\t\t</td>\r\n\t\t\t\t\t</tr>\r\n\t\t\t\t</tbody>\r\n\t\t\t</table>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" v-show-modal=\"isBSDeletion\" data-backdrop=\"static\" data-keyboard=\"false\">\r\n\t\t<div class=\"modal-dialog modal-sm1\" role=\"document\">\r\n\t\t\t<div class=\"modal-content\">\r\n\t\t\t\t<div class=\"modal-header\">\r\n\t\t\t\t\t<button type=\"button\" class=\"close\" v-on:click=\"cancelBSDeletion\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>\r\n\t\t\t\t\t<h4 class=\"modal-title\">Confirmation</h4>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"modal-body\">\r\n\t\t\t\t\tAre you sure you want to delete \"<strong>{{ bsDeletionItem ? bsDeletionItem.name : null }}</strong>\" product?\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"modal-footer\">\r\n\t\t\t\t\t<button type=\"button\" class=\"btn btn-primary\" v-on:click=\"confirmBSDeletion\">Delete</button>\r\n\t\t\t\t\t<button type=\"button\" class=\"btn btn-default\" v-on:click=\"cancelBSDeletion\">Cancel</button>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n";
-
-/***/ }),
-/* 38 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	module.exports = {
-	    template: __webpack_require__(39),
-	    beforeRouteEnter: function beforeRouteEnter(to, from, next) {
-	        next(function (vm) {
-	            vm.$root.title = 'Settings';
-	        });
-	    }
-	};
-
-/***/ }),
 /* 39 */
 /***/ (function(module, exports) {
 
-	module.exports = "<div class=\"col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1\">\r\n    <div class=\"page-header\">\r\n        <h1 class=\"text-center\">{{ $root.title }}</h1>\r\n    </div>\r\n    <p>\r\n        <strong>Should contain some settings</strong>\r\n    </p>\r\n</div>\r\n";
+	module.exports = "<div>\r\n\t<div class=\"col-md-12\">\r\n\t\t<div class=\"page-header\">\r\n\t\t\t<h1 class=\"text-center\">{{ $root.title }}</h1>\r\n\t\t</div>\r\n\t\t<div class=\"table-responsive\">\r\n\t\t\t<table class=\"table table-hover\">\r\n\t\t\t\t<thead>\r\n\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t<th>Name</th>\r\n\t\t\t\t\t\t<th>Price</th>\r\n\t\t\t\t\t\t<th>Amount</th>\r\n\t\t\t\t\t\t<th></th>\r\n\t\t\t\t\t</tr>\r\n\t\t\t\t</thead>\r\n\t\t\t\t<tbody>\r\n\t\t\t\t\t<tr v-for=\"item in items\">\r\n\t\t\t\t\t\t<td>{{ item.name }}</td>\r\n\t\t\t\t\t\t<td>{{ item.price }}</td>\r\n\t\t\t\t\t\t<td>{{ item.amount }}</td>\r\n\t\t\t\t\t\t<td class=\"actions-column product-actions-column\">\r\n\t\t\t\t\t\t\t<button class=\"btn btn-default\" v-on:click=\"deleteUsingJSConfirm(item)\">Delete Using JS Confirm</button>\r\n\t\t\t\t\t\t\t<button class=\"btn btn-default\" v-on:click=\"deleteUsingBSModal(item)\">Delete Using BS Modal</button>\r\n\t\t\t\t\t\t\t<button class=\"btn btn-default\" v-on:click=\"deleteUsingJQueryConfirm(item)\">Delete Using jquery-confirm</button>\r\n\t\t\t\t\t\t</td>\r\n\t\t\t\t\t</tr>\r\n\t\t\t\t</tbody>\r\n\t\t\t</table>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" v-show-modal=\"isBSDeletion\" data-backdrop=\"static\" data-keyboard=\"false\">\r\n\t\t<div class=\"modal-dialog modal-sm1\" role=\"document\">\r\n\t\t\t<div class=\"modal-content\">\r\n\t\t\t\t<div class=\"modal-header\">\r\n\t\t\t\t\t<button type=\"button\" class=\"close\" v-on:click=\"cancelBSDeletion\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>\r\n\t\t\t\t\t<h4 class=\"modal-title\">Confirmation</h4>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"modal-body\">\r\n\t\t\t\t\tAre you sure you want to delete \"<strong>{{ bsDeletionItem ? bsDeletionItem.name : null }}</strong>\" product?\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"modal-footer\">\r\n\t\t\t\t\t<button type=\"button\" class=\"btn btn-primary\" v-on:click=\"confirmBSDeletion\">Delete</button>\r\n\t\t\t\t\t<button type=\"button\" class=\"btn btn-default\" v-on:click=\"cancelBSDeletion\">Cancel</button>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n";
 
 /***/ }),
 /* 40 */
@@ -56687,6 +56691,27 @@
 
 	module.exports = {
 	    template: __webpack_require__(41),
+	    beforeRouteEnter: function beforeRouteEnter(to, from, next) {
+	        next(function (vm) {
+	            vm.$root.title = 'Settings';
+	        });
+	    }
+	};
+
+/***/ }),
+/* 41 */
+/***/ (function(module, exports) {
+
+	module.exports = "<div class=\"col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1\">\r\n    <div class=\"page-header\">\r\n        <h1 class=\"text-center\">{{ $root.title }}</h1>\r\n    </div>\r\n    <p>\r\n        <strong>Should contain some settings</strong>\r\n    </p>\r\n</div>\r\n";
+
+/***/ }),
+/* 42 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	module.exports = {
+	    template: __webpack_require__(43),
 	    data: function data() {
 	        return {
 	            email: null,
@@ -56720,13 +56745,13 @@
 	};
 
 /***/ }),
-/* 41 */
+/* 43 */
 /***/ (function(module, exports) {
 
 	module.exports = "<div class=\"col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3\">\r\n    <div class=\"page-header\">\r\n        <h1 class=\"text-center\">{{ $root.title }}</h1>\r\n    </div>\r\n\t<div>\r\n\t\t<div class=\"form-group\" v-bind:class=\"{ 'has-error': errors.has('email') }\">\r\n\t\t\t<label for=\"email\">Email</label>\r\n\t\t\t<span class=\"help-block\" v-show=\"errors.has('email')\">\r\n\t\t\t\t{{ errors.first('email') }}\r\n\t\t\t</span>\r\n\t\t\t<input type=\"text\" v-model=\"email\" name=\"email\" id=\"email\" v-validate=\"'required|email|min:5|max:256'\"  class=\"form-control\" />\r\n\t\t</div>\r\n\t\t<div class=\"form-group\" v-bind:class=\"{ 'has-error': errors.has('password') }\">\r\n\t\t\t<label for=\"password\">Password</label>\r\n\t\t\t<span class=\"help-block\" v-show=\"errors.has('password')\">\r\n\t\t\t\t{{ errors.first('password') }}\r\n\t\t\t</span>\r\n\t\t\t<input type=\"password\" v-model=\"password\" name=\"password\" id=\"password\" v-validate=\"'required|min:3|max:16'\" class=\"form-control\" />\r\n\t\t</div>\r\n\t\t<input type=\"submit\" value=\"Sign In\" v-on:click=\"signIn\" class=\"btn btn-primary\" />\r\n\t\t<br />\r\n\t\t<br />\r\n\t\t<p class=\"text-muted\">Use <b>admin@mail.com</b>/<b>abc123</b> credentials</p>\r\n\t</div>\r\n</div>\r\n";
 
 /***/ }),
-/* 42 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -56755,7 +56780,7 @@
 	});
 
 	module.exports = {
-		template: __webpack_require__(43),
+		template: __webpack_require__(45),
 		data: function data() {
 			return {
 				firstName: null,
@@ -56799,13 +56824,13 @@
 	};
 
 /***/ }),
-/* 43 */
+/* 45 */
 /***/ (function(module, exports) {
 
 	module.exports = "<div class=\"col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3\">\r\n    <div class=\"page-header\">\r\n        <h1 class=\"text-center\">{{ $root.title }}</h1>\r\n    </div>\r\n\t<div>\r\n\t\t<div class=\"form-group\" v-bind:class=\"{ 'has-error': errors.has('firstName') }\">\r\n\t\t\t<label for=\"first-name\">First Name</label>\r\n\t\t\t<span class=\"help-block\" v-show=\"errors.has('firstName')\">\r\n\t\t\t\t{{ errors.first('firstName') }}\r\n\t\t\t</span>\r\n\t\t\t<input type=\"text\" id=\"first-name\" name=\"firstName\" v-model=\"firstName\" class=\"form-control\" v-validate=\"'required|min:2|max:128'\" />\r\n\t\t</div>\r\n\t\t<div class=\"form-group\" v-bind:class=\"{ 'has-error': errors.has('lastName') }\">\r\n\t\t\t<label for=\"last-name\">Last Name</label>\r\n\t\t\t<span class=\"help-block\" v-show=\"errors.has('lastName')\">\r\n\t\t\t\t{{ errors.first('lastName') }}\r\n\t\t\t</span>\r\n\t\t\t<input type=\"text\" id=\"last-name\" name=\"lastName\" v-model=\"lastName\" class=\"form-control\" v-validate=\"'required|min:2|max:128'\" />\r\n\t\t</div>\r\n\t\t<div class=\"form-group\" v-bind:class=\"{ 'has-error': errors.has('email') }\">\r\n\t\t\t<label for=\"email\">Email</label>\r\n\t\t\t<span class=\"help-block\" v-show=\"errors.has('email')\">\r\n\t\t\t\t{{ errors.first('email') }}\r\n\t\t\t</span>\r\n\t\t\t<input type=\"text\" id=\"email\" name=\"email\" v-model=\"email\" class=\"form-control\" v-validate=\"'required|email|min:5|max:256|uniqueEmail'\" />\r\n\t\t</div>\r\n\t\t<div class=\"form-group\" v-bind:class=\"{ 'has-error': errors.has('password') }\">\r\n\t\t\t<label for=\"password\">Password</label>\r\n\t\t\t<span class=\"help-block\" v-show=\"errors.has('password')\">\r\n\t\t\t\t{{ errors.first('password') }}\r\n\t\t\t</span>\r\n\t\t\t<input type=\"password\" id=\"password\" name=\"password\" v-model=\"password\" class=\"form-control\" v-validate=\"'required|min:6|max:16'\" autocomplete=\"off\" />\r\n\t\t</div>\r\n\r\n\t\t<div class=\"form-group\" v-bind:class=\"{ 'has-error': errors.has('agreement') }\">\r\n\t\t\t<div class=\"checkbox\">\r\n\t\t\t\t<label>\r\n\t\t\t\t\t<input type=\"checkbox\" name=\"agreement\" v-model=\"agreement\" v-validate=\"'required'\" />\r\n\t\t\t\t\tI agree to terms of service and privacy policy\r\n\t\t\t\t</label>\r\n\t\t\t\t<span class=\"help-block\" v-show=\"errors.has('agreement')\">\r\n\t\t\t\t\t{{ errors.first('agreement') }}\r\n\t\t\t\t</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<input type=\"submit\" value=\"Sign Up\" v-on:click=\"signUp\" class=\"btn btn-primary\" />\r\n\t</div>\r\n</div>\r\n";
 
 /***/ }),
-/* 44 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -56817,7 +56842,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
-	    template: __webpack_require__(45),
+	    template: __webpack_require__(47),
 	    data: function data() {
 	        return {
 	            summary: null
@@ -56837,13 +56862,13 @@
 	};
 
 /***/ }),
-/* 45 */
+/* 47 */
 /***/ (function(module, exports) {
 
 	module.exports = "<div class=\"col-md-8 col-md-offset-2 col-sm-12\">\r\n    <div class=\"page-header\">\r\n        <h1 class=\"text-center\">{{ $root.title }}</h1>\r\n    </div>\r\n    <div v-if=\"summary\" class=\"summary-container\">\r\n        <div class=\"row details-list\">\r\n            <dl class=\"col-sm-6\" v-show=\"summary.email\">\r\n                <dt>Email</dt>\r\n                <dd>{{ summary.email }}</dd>\r\n            </dl>\r\n            <dl class=\"col-sm-6\" v-show=\"summary.office\">\r\n                <dt>Office</dt>\r\n                <dd>{{ summary.office }}</dd>\r\n            </dl>\r\n            <dl class=\"col-sm-6\" v-show=\"summary.gender\">\r\n                <dt>Gender</dt>\r\n                <dd>{{ summary.gender }}</dd>\r\n            </dl>\r\n            <dl class=\"col-sm-6\" v-show=\"summary.birthday\">\r\n                <dt>Birthday</dt>\r\n                <dd>{{ summary.birthday }}</dd>\r\n            </dl>\r\n            <dl class=\"col-sm-6\" v-show=\"summary.notes\">\r\n                <dt>Notes</dt>\r\n                <dd>{{ summary.notes }}</dd>\r\n            </dl>\r\n        </div>\r\n    </div>\r\n</div>";
 
 /***/ }),
-/* 46 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -56875,7 +56900,7 @@
 	    }
 	});
 	module.exports = {
-	    template: __webpack_require__(47),
+	    template: __webpack_require__(49),
 	    data: function data() {
 	        return {
 	            items: _userService2.default.getAll(),
@@ -56952,7 +56977,7 @@
 	};
 
 /***/ }),
-/* 47 */
+/* 49 */
 /***/ (function(module, exports) {
 
 	module.exports = "<div>\r\n\t<div class=\"col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0\">\r\n\t\t<div class=\"page-header\">\r\n\t\t\t<h1 class=\"text-center\">{{ $root.title }}</h1>\r\n\t\t</div>\r\n\t\t<button v-on:click=\"newuser\" class=\"btn btn-default\">New</button>\r\n\t\t<div class=\"table-responsive\">\r\n\t\t\t<table class=\"table table-hover\">\r\n\t\t\t\t<thead>\r\n\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t<th>First Name</th>\r\n\t\t\t\t\t\t<th>Last Name</th>\r\n\t\t\t\t\t\t<th>Email</th>\r\n\t\t\t\t\t\t<th>Office</th>\r\n\t\t\t\t\t\t<th></th>\r\n\t\t\t\t\t</tr>\r\n\t\t\t\t</thead>\r\n\t\t\t\t<tbody>\r\n\t\t\t\t\t<tr v-for=\"item in items\">\r\n\t\t\t\t\t\t<td>{{ item.firstName }}</td>\r\n\t\t\t\t\t\t<td>{{ item.lastName }}</td>\r\n\t\t\t\t\t\t<td>{{ item.email }}</td>\r\n\t\t\t\t\t\t<td>{{ item.office }}</td>\r\n\t\t\t\t\t\t<td class=\"actions-column user-actions-column\">\r\n\t\t\t\t\t\t\t<div class=\"btn-group btn-group-sm\" role=\"group\">\r\n\t\t\t\t\t\t\t\t<router-link :to=\"{ path: 'users/'+item.id }\"  role=\"button\" class=\"btn btn-default\">View</router-link>\r\n\t\t\t\t\t\t\t\t<button class=\"btn btn-default\" v-on:click=\"edit(item)\">Edit</button>\r\n\t\t\t\t\t\t\t\t<button class=\"btn btn-default\" v-on:click=\"remove(item)\">Delete</button>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</td>\r\n\t\t\t\t\t</tr>\r\n\t\t\t\t</tbody>\r\n\t\t\t</table>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" v-show-modal=\"isEditing\" data-backdrop=\"static\" data-keyboard=\"false\">\r\n\t\t<div class=\"modal-dialog\" role=\"document\">\r\n\t\t\t<div class=\"modal-content\">\r\n\t\t\t\t<div class=\"modal-header\">\r\n\t\t\t\t\t<button type=\"button\" class=\"close\" v-on:click=\"cancelEditing\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>\r\n\t\t\t\t\t<h4 class=\"modal-title\">{{ editItem.title }}</h4>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"modal-body\" style=\"height: 432px\">\r\n\t\t\t\t\t<form novalidate v-if=\"editItem.data\">\r\n\t\t\t\t\t\t<ul class=\"nav nav-tabs\" role=\"tablist\">\r\n\t\t\t\t\t\t\t<li role=\"presentation\" class=\"active\">\r\n\t\t\t\t\t\t\t\t<a href=\"#general\" aria-controls=\"home\" role=\"tab\" data-toggle=\"tab\">\r\n\t\t\t\t\t\t\t\t\tGeneral\r\n\t\t\t\t\t\t\t\t\t<span class=\"glyphicon glyphicon-exclamation-sign text-danger\" aria-hidden=\"true\"\r\n\t\t\t\t\t\t\t\t\t\t  v-show=\"errors.has('firstName') || errors.has('lastName') || errors.has('email') || errors.has('office') || errors.has('gender')\"></span>\r\n\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t\t<li role=\"presentation\">\r\n\t\t\t\t\t\t\t\t<a href=\"#additional\" aria-controls=\"home\" role=\"tab\" data-toggle=\"tab\">\r\n\t\t\t\t\t\t\t\t\tAdditional\r\n\t\t\t\t\t\t\t\t\t<span class=\"glyphicon glyphicon-exclamation-sign text-danger\" aria-hidden=\"true\"\r\n\t\t\t\t\t\t\t\t\t\t  v-show=\"errors.has('birthday') || errors.has('notes')\"></span>\r\n\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t</ul>\r\n\t\t\t\t\t\t<div class=\"tab-content\">\r\n\t\t\t\t\t\t\t<div role=\"tabpanel\" class=\"tab-pane active\" id=\"general\">\r\n\t\t\t\t\t\t\t\t<div class=\"form-group\" v-bind:class=\"{ 'has-error': errors.has('firstName') }\">\r\n\t\t\t\t\t\t\t\t\t<label for=\"first-name\">First Name</label>\r\n\t\t\t\t\t\t\t\t\t<span class=\"help-block\" v-show=\"errors.has('firstName')\">\r\n\t\t\t\t\t\t\t\t\t\t{{ errors.first('firstName') }}\r\n\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t<input type=\"text\" id=\"first-name\" name=\"firstName\" v-model=\"editItem.data.firstName\" class=\"form-control\" v-validate=\"'required|min:2|max:128'\" />\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div class=\"form-group\" v-bind:class=\"{ 'has-error': errors.has('lastName') }\">\r\n\t\t\t\t\t\t\t\t\t<label for=\"last-name\">Last Name</label>\r\n\t\t\t\t\t\t\t\t\t<span class=\"help-block\" v-show=\"errors.has('lastName')\">\r\n\t\t\t\t\t\t\t\t\t\t{{ errors.first('lastName') }}\r\n\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t<input type=\"text\" id=\"last-name\" name=\"lastName\" v-model=\"editItem.data.lastName\" class=\"form-control\" v-validate=\"'required|min:2|max:128'\" />\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div class=\"form-group\" v-bind:class=\"{ 'has-error': errors.has('email') }\">\r\n\t\t\t\t\t\t\t\t\t<label for=\"email\">Email</label>\r\n\t\t\t\t\t\t\t\t\t<span class=\"help-block\" v-show=\"errors.has('email')\">\r\n\t\t\t\t\t\t\t\t\t\t{{ errors.first('email') }}\r\n\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t<input type=\"text\" id=\"email\" name=\"email\" v-model=\"editItem.data.email\" v-bind:readonly=\"!editItem.isNew\" class=\"form-control\" v-validate=\"'required|email|min:5|max:256|uniqueEmail'\" />\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div class=\"form-group\" v-bind:class=\"{ 'has-error': errors.has('office') }\">\r\n\t\t\t\t\t\t\t\t\t<label for=\"office\">Office</label>\r\n\t\t\t\t\t\t\t\t\t<span class=\"help-block\" v-show=\"errors.has('office')\">\r\n\t\t\t\t\t\t\t\t\t\t{{ errors.first('office') }}\r\n\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t<select id=\"office\" name=\"office\" v-model=\"editItem.data.office\" class=\"form-control\" v-validate=\"'required'\" >\r\n\t\t\t\t\t\t\t\t\t\t<option value=\"Berlin\">Berlin</option>\r\n\t\t\t\t\t\t\t\t\t\t<option value=\"London\">London</option>\r\n\t\t\t\t\t\t\t\t\t\t<option value=\"New York\">New York</option>\r\n\t\t\t\t\t\t\t\t\t\t<option value=\"Paris\">Paris</option>\r\n\t\t\t\t\t\t\t\t\t\t<option value=\"Rome\">Rome</option>\r\n\t\t\t\t\t\t\t\t\t\t<option value=\"Tokio\">Tokio</option>\r\n\t\t\t\t\t\t\t\t\t\t<option value=\"Washington\">Washington</option>\r\n\t\t\t\t\t\t\t\t\t</select>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div class=\"form-group\" v-bind:class=\"{ 'has-error': errors.has('gender') }\">\r\n\t\t\t\t\t\t\t\t\t<label>Gender</label>\r\n\t\t\t\t\t\t\t\t\t<span class=\"help-block\" v-show=\"errors.has('gender')\">\r\n\t\t\t\t\t\t\t\t\t\t{{ errors.first('gender') }}\r\n\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t<input type=\"hidden\" name=\"gender\" v-model=\"editItem.data.gender\" v-validate=\"'required'\">\r\n\t\t\t\t\t\t\t\t\t<br>\r\n\t\t\t\t\t\t\t\t\t<label class=\"label-option\">\r\n\t\t\t\t\t\t\t\t\t\t<input type=\"radio\" value=\"Male\" v-model=\"editItem.data.gender\">\r\n\t\t\t\t\t\t\t\t\t\tMale\r\n\t\t\t\t\t\t\t\t\t</label>\r\n\t\t\t\t\t\t\t\t\t<label class=\"label-option\">\r\n\t\t\t\t\t\t\t\t\t\t<input type=\"radio\" value=\"Female\" v-model=\"editItem.data.gender\">\r\n\t\t\t\t\t\t\t\t\t\tFemale\r\n\t\t\t\t\t\t\t\t\t</label>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<div role=\"tabpanel\" class=\"tab-pane\" id=\"additional\">\r\n\t\t\t\t\t\t\t\t<div class=\"form-group\" v-bind:class=\"{ 'has-error': errors.has('birthday') }\">\r\n\t\t\t\t\t\t\t\t\t<label for=\"birthday\">Birthday</label>\r\n\t\t\t\t\t\t\t\t\t<span class=\"help-block\" v-show=\"errors.has('birthday')\">\r\n\t\t\t\t\t\t\t\t\t\t{{ errors.first('birthday') }}\r\n\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t<div class=\"input-group date\" v-date-picker=\"true\">\r\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" id=\"birthday\"  name=\"birthday\" v-model=\"editItem.data.birthday\" class=\"form-control\" />\r\n\t\t\t\t\t\t\t\t\t\t<span class=\"input-group-addon\"><i class=\"glyphicon glyphicon-calendar\"></i></span>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div class=\"form-group\" v-bind:class=\"{ 'has-error': errors.has('notes') }\">\r\n\t\t\t\t\t\t\t\t\t<label for=\"notes\">Notes</label>\r\n\t\t\t\t\t\t\t\t\t<span class=\"help-block\" v-show=\"errors.has('notes')\">\r\n\t\t\t\t\t\t\t\t\t\t{{ errors.first('notes') }}\r\n\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t<textarea id=\"notes\" name=\"notes\" v-model=\"editItem.data.notes\" class=\"form-control\" v-validate=\"'max:2000'\"></textarea>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</form>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"modal-footer\">\r\n\t\t\t\t\t<button type=\"button\" class=\"btn btn-primary\" v-show=\"editItem.isNew\" v-on:click=\"create\">Create</button>\r\n\t\t\t\t\t<button type=\"button\" class=\"btn btn-primary\" v-show=\"!editItem.isNew\" v-on:click=\"update\">Save</button>\r\n\t\t\t\t\t<button type=\"button\" class=\"btn btn-default\" v-on:click=\"cancelEditing\">Cancel</button>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>";

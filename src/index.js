@@ -49,6 +49,7 @@ var router = new VueRouter({routes: [
 	{ path:'/plans', component: require('./components/plans.js') },
 	{ path:'/products', component: require('./components/products.js') },
 	{ path:'/calculations', component: require('./components/calculations.js') },
+	{ path:'/javadoc', component: require('./components/javadoc.js') },
 	{ path:'/settings', component: requireWithAuthentication('./components/settings.js') },
 	{ path:'/users', component: requireWithAuthentication('./components/user-list.js') },
 	{ path:'/users/:userId', component: requireWithAuthentication('./components/user-details.js') },

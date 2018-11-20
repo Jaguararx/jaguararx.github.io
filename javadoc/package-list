@@ -1,0 +1,11 @@
+com.teaminternational.coe.entities.users
+com.teaminternational.coe.enums
+com.teaminternational.coe.pages
+com.teaminternational.coe.pages.examples
+com.teaminternational.coe.tests
+com.teaminternational.coe.tests.example
+com.teaminternational.coe.utils
+com.teaminternational.coe.utils.report
+com.teaminternational.coe.utils.report.zapi
+com.teaminternational.coe.utils.testng
+com.teaminternational.coe.utils.webdriver

@@ -115,3 +115,14 @@ textarea#notes {
 .clear {
   clear:both;
 }
+html.allwidth {
+	height:86%;
+	body,
+	div#app,
+	div.container,
+	div.allwidthdiv,  
+	iframe {
+		width:100%;
+		height:100%;
+	}
+}

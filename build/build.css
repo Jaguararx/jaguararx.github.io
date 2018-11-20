@@ -7532,3 +7532,13 @@ textarea#notes {
 
 .clear {
   clear: both; }
+
+html.allwidth {
+  height: 86%; }
+  html.allwidth body,
+  html.allwidth div#app,
+  html.allwidth div.container,
+  html.allwidth div.allwidthdiv,
+  html.allwidth iframe {
+    width: 100%;
+    height: 100%; }

@@ -23,6 +23,9 @@
             </div>
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="nav navbar-nav">
+                    <li v-bind:class="{ active: $route.path === '/javadoc' }">
+                        <router-link to="/javadoc">COE Test Automation Framework Documentation</router-link>
+                    </li>
                     <li v-bind:class="{ active: $route.path === '/plans' }">
                         <router-link to="/plans">Plans</router-link>
                     </li>
