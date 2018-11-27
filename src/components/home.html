@@ -12,121 +12,112 @@
         <router-link to="/signin" id="sign-in" class="btn btn-lg btn-default">Sign In</router-link>
         <router-link to="/signup" id="sign-up" class="btn btn-lg btn-default">Sign Up</router-link>
     </p>
-	<p>Checkbox:<br>
-	  <input type="checkbox" name="checkboxinput" value="1"> checkbox 1<br>
-	  <input type="checkbox" name="checkboxinput2" value="2"> checkbox 2
-    </p>
-	<p>Radio:<br>
-	  <input name="_fsradio2" type="radio" value="1"><br>
-	  <input name="_fsradio2" type="radio" value="2">
-    </p>
-	<p>Input text:<br>
-	  <input type="text" name="textinput" value="">
-    </p>
-	<div class="example">
-	  <h3>Dropdown List</h3>
+	<div class="demo_block">
+	  <h3 class="demo_title">Invisible text. Javascript timeout display and hide.</h3>
+	  Not visible text next to it, will be visible in 2 sec and disappear in 4 sec: <span class="waiting">Not ready</span>
+    </div>
+	<div class="demo_block" id="checkboxes">
+	  <h3 class="demo_title">Checkbox:</h3><br>
+	  <input type="checkbox" id="checkboxinput" name="checkboxinput" value="1"> checkbox 1<br>
+	  <input type="checkbox" id="checkboxinput2" name="checkboxinput2" value="2"> checkbox 2
+    </div>
+	<div class="demo_block"  id="radioboxes">
+	  <h3 class="demo_title">Radio:</h3><br>
+	  <input name="_fsradio2" id="radio1" type="radio" value="1"> radio 1<br>
+	  <input name="_fsradio2" id="radio2" type="radio" value="2"> radio 2
+    </div>
+	<div class="demo_block" id="textinputs">
+	  <h3 class="demo_title">Input text:</h3><br>
+	  <input type="text" name="textinput" id="text1" value="">
+    </div>
+	<div class="example demo_block" id="dropdowns">
+	  <h3 class="demo_title">Dropdown List</h3>
 	  <select id="dropdown" name="documentation-version">
 		  <option value="" disabled="disabled" selected="selected">Please select an option</option>
 		  <option value="1">Option 1</option>
 		  <option value="2">Option 2</option>
 	  </select>
 	</div>	
-	<p>
-	  User profile:<br>
-	  <input type="text" name="userfirstname" ng-model="user.firstName" value=""><br><br>
-	  <input type="text" name="usersecondname" ng-model="user.lastName" value=""><br><br>
-	  <input type="text" name="company" ng-model="user.company" value=""><br><br>
+	<div class="demo_block" id="forms">
+	  <h3 class="demo_title">User profile:</h3><br>
+	  <input type="text" id="firstname" name="userfirstname" ng-model="user.firstName" value=""><br><br>
+	  <input type="text" id="lastname" name="usersecondname" ng-model="user.lastName" value=""><br><br>
+	  <input type="text" id="company" name="company" ng-model="user.company" value=""><br><br>
 	  <input type="button" value="Save">
-    </p>
-	<p>
-	  Text with 'abc'. And below two paragraphs with this text.
-    </p>
-	<p>
-	  Text with 'abc'.
-    </p>
-	<p>
-	  Abc abc abc. 123 123 123 .
-    </p>
-	<p>
-	  123 123 123 123 . xyz xyz xyz.
-    </p>
-	<div class="example">
-	  <h3>File Downloader</h3>
-		<a href="download/1.jpg">1.jpg</a>
+    </div>
+	<div class="example demo_block" id="filedownloaders">
+	  <h3 class="demo_title">File Downloader</h3>
+		<a href="download/1.jpg" id="file1">1.jpg</a>
 		<br>
-		<a href="download/some-file.txt">some-file.txt</a>
+		<a href="download/some-file.txt" id="file2">some-file.txt</a>
 		<br>	  
-		<a href="download/1.png">1.png</a>
+		<a href="download/1.png" id="file3">1.png</a>
 		<br>	  
-		<a href="download/ObjectivityTestAutomationCSHarpFramework.txt">ObjectivityTestAutomationCSHarpFramework.txt</a>
+		<a href="download/ObjectivityTestAutomationCSHarpFramework.txt" id="file4">ObjectivityTestAutomationCSHarpFramework.txt</a>
 		<br>	  
-		<a href="download/uploadanddownload.txt">uploadanddownload.txt</a>
+		<a href="download/uploadanddownload.txt" id="file5">uploadanddownload.txt</a>
 		<br>
 	  
 	</div>	
-	<div class="example">
-	  <h3>Drag and Drop</h3>
+	<div class="example demo_block" id="drugndrops">
+	  <h3 class="demo_title">Drag and Drop</h3>
 	  <div id="columns">
 		<div class="column" id="column-a" draggable="true"><header>A</header></div>
 		<div class="column" id="column-b" draggable="true"><header>B</header></div>
 	  </div>
+	  <div class="clear"></div>
 	</div>	
-	<p class="clear"><br><br>
-	 <h3 class="autocompletetitle">Autocomplete:</h3>
+	<div class="demo_block" id="autocompletes"><br><br>
+	 <h3 class="demo_title autocompletetitle">Autocomplete:</h3>
 	 <cool-select
 	     v-model="selected"
         :items="items"
         placeholder="Select US State"
+		id="country1"
       />
-    </p>
-	<p><br>
-	  Button:<br>
+    </div>
+	<div class="demo_block" id="buttons"><br>
+	  <h3 class="demo_title">Button:</h3><br>
 	  <button id="abc" name="name" class="button">Button</button><br>
-	  <a href="#name">Button</a>
-    </p>
-	<p md-svg-src="img/icons/android.svg">
-	  SelenideSelectors test:
-	  <button class="buy" title="my_title" value="my_value">Basic Usage</button>
-    </p>
-	<p>
-	  Redundant Selectors
+	  <a href="#name" id="linkbutton1">Button</a>
+    </div>
+	<div md-svg-src="img/icons/android.svg"  class="demo_block" id="buttons2">
+	  <h3 class="demo_title">SelenideSelectors test:</h3>
+	  <button class="buy" title="my_title" value="my_value" id="button2">Basic Usage</button>
+    </div>
+	<div class="demo_block" id="inputtexts2">
+	  <h3 class="demo_title">Redundant Selectors</h3>
 	  <input type="text" name="abc" title="cde" value="fgh" id="ijk" class="xyz">
-    </p>
-	<p class="container">
-	  <span>abc</span><br>
-	  <span class="subarea">
+    </div>
+	<div class="demo_block" id="htmlselectors">
+	  <h3 class="demo_title">HTML with text.</h3>
+	  <span id="span1">abc</span><br>
+	  <span class="subarea" id="span2">
 	    <b>Bottom Sheet</b>
 	  </span>
-	  <ul>
-	    <li>list item 1</li>
-	    <li>list item 2</li>
+	  <ul id="ul1">
+	    <li id="li1">list item 1</li>
+	    <li id="li2">list item 2</li>
 	  </ul>
-    </p>
-	<p>
-	  Not visible text next to it, will be visible in 2 sec and disappear in 4 sec: <span class="waiting">Not ready</span>
-    </p>
-	<p>
-    </p>
-	<p>
-    </p>
-	<p>
-    </p>
-	<p>
-    </p>
-	<p>
-    </p>
-	<p>
-    </p>
-	<p>
-    </p>
-	<p>
-    </p>
-	<p>
-    </p>
-	<p>
-    </p>
-	<p>
-    </p>
-	<p>
-    </p>
+    </div>
+	<div class="demo_block" id="texts1">
+	  <h3 class="demo_title">Text 1</h3>
+	  Text with 'abc'. And below two paragraphs with this text.
+    </div>
+	<div class="demo_block" id="texts2">
+	  <h3 class="demo_title">Text 2</h3>
+	  Text with 'abc'.
+    </div>
+	<div class="demo_block" id="texts3">
+	  <h3 class="demo_title">Text 3</h3>
+	  Abc abc abc. 123 123 123 .
+    </div>
+	<div class="demo_block" id="texts4">
+	  <h3 class="demo_title">Text 4</h3>
+	  123 123 123 123 . xyz xyz xyz.
+    </div>
+	<div>
+    </div>
+	<div>
+    </div>
 </div>

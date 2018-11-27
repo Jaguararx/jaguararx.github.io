@@ -7542,3 +7542,11 @@ html.allwidth {
   html.allwidth iframe {
     width: 100%;
     height: 100%; }
+
+.demo_block {
+  margin: 20px 10px;
+  padding: 20px 10px;
+  border: 1px solid #bbb;
+  border-radius: 5px; }
+  .demo_block h3.demo_title {
+    margin-top: 0px; }
