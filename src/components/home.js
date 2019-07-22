@@ -16,9 +16,16 @@ module.exports = {
 			},2000);
 	    })
     },
+	methods: {
+	  bind_customddlvalue(str) {
+		console.log(str);
+	    $('#dropdownMenuButton').html(str+' <span class="caret"></span>');  
+	  }
+	},
 	data () {
 		return {
 		  selected: null,
+			
 		  items: [
 			  'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware',
 			  'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana',

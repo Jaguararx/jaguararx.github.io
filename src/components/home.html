@@ -76,6 +76,18 @@
 		id="country1"
       />
     </div>
+	<div class="demo_block" id="customddl"><br>
+	  <h3 class="demo_title">Custom select (dropdown list):</h3><br>
+	  <div class="dropdown">
+		  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="dropdownMenuButton">Dropdown Example
+		  <span class="caret"></span></button>
+		  <ul class="dropdown-menu">
+			<li><a href="javascript:;" v-on:click="bind_customddlvalue('HTML');">HTML</a></li>
+			<li><a href="javascript:;" v-on:click="bind_customddlvalue('CSS');">CSS</a></li>
+			<li><a href="javascript:;" v-on:click="bind_customddlvalue('JavaScript');">JavaScript</a></li>
+		  </ul>
+		</div>
+    </div>
 	<div class="demo_block" id="buttons"><br>
 	  <h3 class="demo_title">Button:</h3><br>
 	  <button id="abc" name="name" class="button">Button</button><br>
